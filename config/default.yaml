@@ -1,0 +1,46 @@
+# Drone Security Analyst Agent - property + rule configuration.
+# Everything the rule engine needs is data, not code, so a property owner
+# (or an LLM) can tune behaviour without touching Python.
+
+property:
+  name: "Riverside Logistics Yard"
+  dock: {lat: 18.52040, lon: 73.85670}
+  # Semantic zones the geofence maps GPS positions onto.
+  zones:
+    main_gate:       {lat: 18.52010, lon: 73.85600, restricted: false}
+    driveway:        {lat: 18.52025, lon: 73.85630, restricted: false}
+    garage:          {lat: 18.52050, lon: 73.85640, restricted: false}
+    front_door:      {lat: 18.52060, lon: 73.85660, restricted: false}
+    parking_lot:     {lat: 18.52030, lon: 73.85690, restricted: false}
+    loading_dock:    {lat: 18.52070, lon: 73.85710, restricted: false}
+    warehouse:       {lat: 18.52090, lon: 73.85700, restricted: true}
+    backyard:        {lat: 18.52100, lon: 73.85650, restricted: false}
+    perimeter_fence: {lat: 18.52120, lon: 73.85620, restricted: true}
+
+rules:
+  night_hours: {start: "22:00", end: "06:00"}      # wraps midnight
+  business_hours: {start: "07:00", end: "19:00"}
+  loitering_min_dwell_s: 120                        # person present >= 2 min
+  visit_gap_s: 600                                  # >10 min unseen => new visit
+  repeat_vehicle_entries: 2                         # "entered twice today"
+  unattended_package_s: 1800                        # 30 min
+  alert_cooldown_s: 600                             # de-dup same rule+entity
+  low_battery_pct: 25
+  critical_battery_pct: 15
+  max_altitude_m: 120                               # regulatory ceiling
+  geofence_radius_m: 400                            # from dock
+  # Known/authorised vehicles: no after-hours alert, still logged.
+  whitelisted_plates: ["MH12AB1234"]
+  suspicious_keywords:
+    - crowbar
+    - masked
+    - balaclava
+    - flashlight
+    - headlights off
+    - circling
+    - peering
+    - testing door
+    - cutting
+    - weapon
+    - fire
+    - smoke

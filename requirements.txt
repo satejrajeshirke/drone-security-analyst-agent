@@ -1,0 +1,15 @@
+# Core prototype (runs fully offline)
+PyYAML==6.0.4
+rich==15.0.0
+pytest==9.2.0
+# LLM agent (Groq if GROQ_API_KEY is set, else Claude if ANTHROPIC_API_KEY is set, else offline)
+python-dotenv==1.2.4
+langchain-groq==1.2.1
+groq==1.7.0
+langchain==1.5.2
+langchain-core==1.8.4
+langchain-anthropic==1.7.12
+anthropic==2.12.0
+# Real-image VLM (Gemini vision; used when GEMINI_API_KEY is set)
+google-genai==3.6.1
+pillow==13.0.0

@@ -1,0 +1,82 @@
+[
+  {
+    "file": "01_parking_lot_aerial.jpg",
+    "zone": "parking_lot",
+    "time": "13:20",
+    "query": "aerial view parking lot cars",
+    "source": "https://commons.wikimedia.org/wiki/File:Parking_lot,_Gross-Gerau_(P1090665).jpg",
+    "title": "File:Parking lot, Gross-Gerau (P1090665).jpg",
+    "artist": "Matti Blume",
+    "license": "CC BY-SA 4.0"
+  },
+  {
+    "file": "02_pickup_truck.jpg",
+    "zone": "driveway",
+    "time": "07:31",
+    "query": "pickup truck driveway",
+    "source": "https://commons.wikimedia.org/wiki/File:Pickup_(258075301).jpg",
+    "title": "File:Pickup (258075301).jpg",
+    "artist": "Anthony Easton from Montreal, canada",
+    "license": "CC BY 2.0"
+  },
+  {
+    "file": "03_person_at_gate.jpg",
+    "zone": "main_gate",
+    "time": "00:05",
+    "query": "security guard standing at gate",
+    "source": "https://commons.wikimedia.org/wiki/File:DFC_5569_Nighttime_guard_at_a_gated_alley_in_Pattaya_standing_by_the_security_booth_as_the_street_glows_with_shop_lights.jpg",
+    "title": "File:DFC 5569 Nighttime guard at a gated alley in Pattaya standing by the security booth as the street glows with shop lights.jpg",
+    "artist": "PattayaPatrol",
+    "license": "CC BY-SA 4.0"
+  },
+  {
+    "file": "04_fence_climb.jpg",
+    "zone": "perimeter_fence",
+    "time": "02:20",
+    "query": "person climbing fence",
+    "source": "https://commons.wikimedia.org/wiki/File:Stowaways_climbing_over_fence.jpg",
+    "title": "File:Stowaways climbing over fence.jpg",
+    "artist": "Префектура Северного административного округа г. Москвы",
+    "license": "CC BY 4.0"
+  },
+  {
+    "file": "05_loading_dock.jpg",
+    "zone": "loading_dock",
+    "time": "08:10",
+    "query": "truck at loading dock",
+    "source": "https://commons.wikimedia.org/wiki/File:Factory_truck_parks_at_the_loading_dock,_Iraq_in_2003.jpeg",
+    "title": "File:Factory truck parks at the loading dock, Iraq in 2003.jpeg",
+    "artist": "Sgt. Raul Elliot, U.S. U.S. Army",
+    "license": "Public domain"
+  },
+  {
+    "file": "06_night_people.jpg",
+    "zone": "warehouse",
+    "time": "23:15",
+    "query": "man with flashlight at night",
+    "source": "https://commons.wikimedia.org/wiki/File:Stars_Flashlight_Cajon_Pass_(Unsplash).jpg",
+    "title": "File:Stars Flashlight Cajon Pass (Unsplash).jpg",
+    "artist": "Jeremy Bishop tidesinourveins",
+    "license": "CC0"
+  },
+  {
+    "file": "07_package_doorstep.jpg",
+    "zone": "front_door",
+    "time": "09:15",
+    "query": "package on porch",
+    "source": "https://commons.wikimedia.org/wiki/File:Packages_Galore_(45458453035).jpg",
+    "title": "File:Packages Galore (45458453035).jpg",
+    "artist": "USFWS Mountain Prairie",
+    "license": "Public domain"
+  },
+  {
+    "file": "08_dog_in_yard.jpg",
+    "zone": "backyard",
+    "time": "14:35",
+    "query": "dog running in backyard",
+    "source": "https://commons.wikimedia.org/wiki/File:Running_puppy_(51050630558).jpg",
+    "title": "File:Running puppy (51050630558).jpg",
+    "artist": "Reba Spike",
+    "license": "CC BY 2.0"
+  }
+]

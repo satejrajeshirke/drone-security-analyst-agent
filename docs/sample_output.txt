@@ -1,0 +1,228 @@
+───────────────────────────────── Drone Security Analyst Agent - live feed ──────────────────────────────────
+Time: 00:01, Location: Main Gate, Alt 25 m, Battery 99%, Mode HOVER
+  Frame 1: Person in dark hoodie standing near the main gate, looking around
+  LOG   Person spotted at main gate, 00:01. [standing]
+Time: 00:02, Location: Main Gate, Alt 25 m, Battery 98%, Mode HOVER
+  Frame 2: Person in dark hoodie still standing at the main gate, pacing slowly
+  LOG   Person spotted at main gate, 00:02. [standing | sighting #2]
+Time: 00:03, Location: Main Gate, Alt 25 m, Battery 98%, Mode HOVER
+  Frame 3: Person in dark hoodie loitering at the main gate, checking the gate latch
+  LOG   Person spotted at main gate, 00:03. [loitering | sighting #3]
+  ALERT HIGH Person loitering at main gate, 00:01 (dwell 2 min, still present 00:03).
+        -> Activate gate floodlight and two-way speaker warning; continue drone overwatch.
+Time: 00:04, Location: Main Gate, Alt 25 m, Battery 97%, Mode HOVER
+  Frame 4: Person in dark hoodie walking away from the main gate toward the road
+  LOG   Person spotted at main gate, 00:04. [leaving | sighting #4]
+Time: 00:40, Location: Backyard, Alt 25 m, Battery 68%, Mode HOVER
+  Frame 7: Fox crossing the backyard lawn
+  LOG   Fox spotted at backyard, 00:40. [crossing]
+Time: 02:15, Location: Perimeter Fence, Alt 25 m, Battery 64%, Mode HOVER
+  Frame 13: Person climbing the perimeter fence near the north corner
+  LOG   Person spotted at perimeter fence, 02:15. [climbing]
+  ALERT CRITICAL Perimeter breach: Person climbing the perimeter fence, 02:15.
+        -> Dispatch guard to the fence line, keep drone tracking the intruder, notify police.
+Time: 02:16, Location: Perimeter Fence, Alt 25 m, Battery 63%, Mode HOVER
+  Frame 14: Person in black jacket running along the inside of the perimeter fence carrying a bag
+  LOG   Person spotted at perimeter fence, 02:16. [running]
+  ALERT CRITICAL Person in restricted zone (perimeter fence) after hours, 02:16.
+        -> Verify identity via speaker challenge; dispatch guard if not authorised.
+Time: 06:45, Location: Parking Lot, Alt 25 m, Battery 64%, Mode HOVER
+  Frame 28: White Toyota Camry parked in the parking lot, plate MH12AB1234
+  LOG   White Toyota Camry spotted at parking lot, 06:45. [parked | plate MH12AB1234]
+Time: 07:30, Location: Main Gate, Alt 25 m, Battery 100%, Mode HOVER
+  Frame 31: Blue Ford F150 pickup truck entering through the main gate, plate MH14CD5678
+  LOG   Blue Ford F150 spotted at main gate, 07:30. [entering | plate MH14CD5678 | entries today: 1]
+Time: 07:32, Location: Driveway, Alt 25 m, Battery 98%, Mode HOVER
+  Frame 32: Blue Ford F150 driving along the driveway toward the garage
+  LOG   Blue Ford F150 spotted at driveway, 07:32. [driving | plate MH14CD5678 | entries today: 1 | sighting 
+#2]
+Time: 08:05, Location: Loading Dock, Alt 25 m, Battery 72%, Mode HOVER
+  Frame 34: White Mercedes Sprinter delivery van parked at the loading dock, two people unloading boxes
+  LOG   White Mercedes Sprinter spotted at loading dock, 08:05. [parked]
+  LOG   2 people spotted at loading dock, 08:05. [unloading]
+Time: 08:20, Location: Loading Dock, Alt 25 m, Battery 60%, Mode HOVER
+  Frame 36: White Mercedes Sprinter van exiting the loading dock
+  LOG   White Mercedes Sprinter spotted at loading dock, 08:20. [exiting | sighting #2]
+Time: 09:10, Location: Front Door, Alt 25 m, Battery 92%, Mode HOVER
+  Frame 39: Package left at the front door by a courier in a yellow vest
+  LOG   Courier spotted at front door, 09:10. [left behind]
+  LOG   Package spotted at front door, 09:10. [left behind]
+Time: 09:12, Location: Front Door, Alt 25 m, Battery 90%, Mode HOVER
+  Frame 40: Courier in yellow vest walking back toward the main gate
+  LOG   Courier spotted at front door, 09:12. [leaving | sighting #2]
+Time: 10:40, Location: Front Door, Alt 25 m, Battery 92%, Mode HOVER
+  Frame 45: Package still at the front door, no one around
+  LOG   Package spotted at front door, 10:40. [unattended | sighting #2]
+  ALERT LOW Package unattended at front door for 90 min (since 09:10), 10:40.
+        -> Ask reception to collect the package; inspect if no delivery was expected.
+Time: 12:00, Location: Garage, Alt 25 m, Battery 100%, Mode HOVER
+  Frame 50: Blue Ford F150 parked at the garage
+  LOG   Blue Ford F150 spotted at garage, 12:00. [parked | plate MH14CD5678 | entries today: 1 | sighting #3]
+Time: 13:15, Location: Parking Lot, Alt 25 m, Battery 40%, Mode HOVER
+  Frame 55: Red Honda Civic parked in the parking lot
+  LOG   Red Honda Civic spotted at parking lot, 13:15. [parked]
+Time: 14:30, Location: Backyard, Alt 25 m, Battery 52%, Mode HOVER
+  Frame 59: Dog running across the backyard
+  LOG   Dog spotted at backyard, 14:30. [running]
+Time: 15:10, Location: Driveway, Alt 131 m, Battery 92%, Mode HOVER
+  ALERT HIGH Drone altitude 131 m exceeds 120 m ceiling over driveway, 15:10.
+        -> Descend below the regulatory ceiling immediately.
+Time: 16:20, Location: Garage, Alt 25 m, Battery 36%, Mode HOVER
+  Frame 65: Blue Ford F150 exiting the garage toward the main gate
+  LOG   Blue Ford F150 spotted at garage, 16:20. [exiting | plate MH14CD5678 | entries today: 1 | sighting 
+#4]
+Time: 16:22, Location: Main Gate, Alt 25 m, Battery 34%, Mode HOVER
+  Frame 66: Blue Ford F150 exiting through the main gate
+  LOG   Blue Ford F150 spotted at main gate, 16:22. [exiting | plate MH14CD5678 | entries today: 1 | sighting
+#5]
+Time: 17:45, Location: Main Gate, Alt 25 m, Battery 40%, Mode HOVER
+  Frame 71: Blue Ford F150 pickup truck entering through the main gate, plate MH14CD5678
+  LOG   Blue Ford F150 spotted at main gate, 17:45. [entering | plate MH14CD5678 | entries today: 2 | 
+sighting #6]
+  ALERT INFO Blue Ford F150 entered twice today (07:30, 17:45).
+        -> Informational: confirm the vehicle is expected; add plate to whitelist if staff.
+Time: 19:30, Location: Main Gate, Alt 25 m, Battery 100%, Mode HOVER
+  Frame 77: Main gate left open, no one present
+  LOG   Gate spotted at main gate, 19:30. [open]
+  ALERT MEDIUM Main gate left open after hours, 19:30.
+        -> Close the gate remotely or send staff to secure it.
+Time: 21:05, Location: Parking Lot, Alt 25 m, Battery 96%, Mode HOVER
+  Frame 82: Red Honda Civic exiting the parking lot
+  LOG   Red Honda Civic spotted at parking lot, 21:05. [exiting | sighting #2]
+Time: 22:30, Location: Perimeter Fence, Alt 25 m, Battery 100%, Mode HOVER
+  Frame 87: Grey sedan with headlights off circling slowly on the perimeter road
+  LOG   Grey sedan spotted at perimeter fence, 22:30. [circling]
+  ALERT HIGH Suspicious activity: Grey sedan at perimeter fence (headlights off, circling), 22:30. 
+(+AFTER_HOURS_VEHICLE)
+        -> Increase patrol frequency in this zone and keep the drone on the subject.
+Time: 23:10, Location: Warehouse, Alt 25 m, Battery 68%, Mode HOVER
+  Frame 89: Two people near the warehouse door with a flashlight, testing the door handle
+  LOG   2 people spotted at warehouse, 23:10. [tampering with entry point]
+  ALERT CRITICAL 2 people tampering with entry point at warehouse, 23:10. (+RESTRICTED_ZONE, 
+SUSPICIOUS_BEHAVIOR)
+        -> Dispatch guard immediately; trigger siren/spotlight; preserve footage as evidence.
+Time: 23:40, Location: Driveway, Alt 25 m, Battery 14%, Mode RTL
+  ALERT CRITICAL Drone battery critical (14%) - return-to-dock, 23:40.
+        -> Return drone to dock; hand over coverage to fixed cameras.
+──────────────────────────────────────────────── End of feed ────────────────────────────────────────────────
+                                                Alerts raised                                                
+┌───────┬──────────┬───────────────────────┬────────────────────────────────────────────────────────────────┐
+│ Time  │ Severity │ Rule                  │ Message                                                        │
+├───────┼──────────┼───────────────────────┼────────────────────────────────────────────────────────────────┤
+│ 00:03 │ HIGH     │ NIGHT_LOITERING       │ Person loitering at main gate, 00:01 (dwell 2 min, still       │
+│       │          │                       │ present 00:03).                                                │
+│ 02:15 │ CRITICAL │ PERIMETER_BREACH      │ Perimeter breach: Person climbing the perimeter fence, 02:15.  │
+│ 02:16 │ CRITICAL │ RESTRICTED_ZONE       │ Person in restricted zone (perimeter fence) after hours,       │
+│       │          │                       │ 02:16.                                                         │
+│ 10:40 │ LOW      │ UNATTENDED_PACKAGE    │ Package unattended at front door for 90 min (since 09:10),     │
+│       │          │                       │ 10:40.                                                         │
+│ 15:10 │ HIGH     │ DRONE_ALTITUDE        │ Drone altitude 131 m exceeds 120 m ceiling over driveway,      │
+│       │          │                       │ 15:10.                                                         │
+│ 17:45 │ INFO     │ REPEAT_VEHICLE        │ Blue Ford F150 entered twice today (07:30, 17:45).             │
+│ 19:30 │ MEDIUM   │ GATE_OPEN_AFTER_HOURS │ Main gate left open after hours, 19:30.                        │
+│ 22:30 │ HIGH     │ SUSPICIOUS_BEHAVIOR   │ Suspicious activity: Grey sedan at perimeter fence (headlights │
+│       │          │                       │ off, circling), 22:30.                                         │
+│ 23:10 │ CRITICAL │ TAMPERING             │ 2 people tampering with entry point at warehouse, 23:10.       │
+│ 23:40 │ CRITICAL │ DRONE_LOW_BATTERY     │ Drone battery critical (14%) - return-to-dock, 23:40.          │
+└───────┴──────────┴───────────────────────┴────────────────────────────────────────────────────────────────┘
+┌─────────────────────────────────────── Video summary (1 sentence) ────────────────────────────────────────┐
+│ Between 00:01 and 23:50 the drone indexed 92 frames and tracked 5 distinct vehicles and 6 distinct        │
+│ persons (the Blue Ford F150 entered 2 times), raising 10 alerts - most serious: Perimeter breach: Person  │
+│ climbing the perimeter fence, 02:15 [CRITICAL].                                                           │
+└───────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+┌────────────────────────────────────────── Agent recommendations ──────────────────────────────────────────┐
+│ - After-hours hot-spots: perimeter fence (3), main gate (1), warehouse (1) - add motion-triggered         │
+│ floodlights there and shift extra drone patrols to 22:00-03:00, when most incidents occurred.             │
+│ - Perimeter breach detected - inspect the fence line for damage and consider fence vibration sensors to   │
+│ cue the drone automatically.                                                                              │
+│ - Entry-point tampering observed - review lock integrity on the affected doors/gate and preserve the      │
+│ indexed frames as evidence.                                                                               │
+│ - Blue Ford F150 (plate MH14CD5678) entered 2 times - confirm it is a known staff/visitor vehicle and add │
+│ it to the whitelist to cut noise, or flag it for follow-up.                                               │
+│ - Packages sat unattended at the front door - set up a reception pickup SLA or a parcel locker.           │
+│ - Main gate was left open after hours - add an automatic close timer / gate-state sensor.                 │
+│ - Drone hit critical battery during a night patrol - shorten late sorties or add a battery swap before    │
+│ 23:00 so coverage is not lost at the riskiest hour.                                                       │
+│ - Flight envelope violation logged - review wind limits / mission altitude for compliance.                │
+└───────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+Indexed 92 frames, 27 detections, 15 entities, 10 alerts.
+
+JSON report written to out/report.json; index at out/index.db
+
+$ python -m drone_security_agent query "show all truck events"
+6 result(s) - mode=structured filters={'subtype': 'truck'}
+┌───────┬──────────┬────────────────┬──────────┬───────────┬────────────────────────────────────────────────┐
+│ ts    │ frame_id │ label          │ action   │ zone      │ description                                    │
+├───────┼──────────┼────────────────┼──────────┼───────────┼────────────────────────────────────────────────┤
+│ 07:30 │ 31       │ Blue Ford F150 │ entering │ main_gate │ Blue Ford F150 pickup truck entering through   │
+│       │          │                │          │           │ the main gate, plate MH14CD5678                │
+│ 07:32 │ 32       │ Blue Ford F150 │ driving  │ driveway  │ Blue Ford F150 driving along the driveway      │
+│       │          │                │          │           │ toward the garage                              │
+│ 12:00 │ 50       │ Blue Ford F150 │ parked   │ garage    │ Blue Ford F150 parked at the garage            │
+│ 16:20 │ 65       │ Blue Ford F150 │ exiting  │ garage    │ Blue Ford F150 exiting the garage toward the   │
+│       │          │                │          │           │ main gate                                      │
+│ 16:22 │ 66       │ Blue Ford F150 │ exiting  │ main_gate │ Blue Ford F150 exiting through the main gate   │
+│ 17:45 │ 71       │ Blue Ford F150 │ entering │ main_gate │ Blue Ford F150 pickup truck entering through   │
+│       │          │                │          │           │ the main gate, plate MH14CD5678                │
+└───────┴──────────┴────────────────┴──────────┴───────────┴────────────────────────────────────────────────┘
+
+$ python -m drone_security_agent query "people at the main gate at night"
+4 result(s) - mode=structured filters={'start': '22:00', 'end': '06:00', 'object_type': 'person', 'zone': 
+'main_gate'}
+┌───────┬──────────┬────────┬───────────┬───────────┬───────────────────────────────────────────────────────┐
+│ ts    │ frame_id │ label  │ action    │ zone      │ description                                           │
+├───────┼──────────┼────────┼───────────┼───────────┼───────────────────────────────────────────────────────┤
+│ 00:01 │ 1        │ Person │ standing  │ main_gate │ Person in dark hoodie standing near the main gate,    │
+│       │          │        │           │           │ looking around                                        │
+│ 00:02 │ 2        │ Person │ standing  │ main_gate │ Person in dark hoodie still standing at the main      │
+│       │          │        │           │           │ gate, pacing slowly                                   │
+│ 00:03 │ 3        │ Person │ loitering │ main_gate │ Person in dark hoodie loitering at the main gate,     │
+│       │          │        │           │           │ checking the gate latch                               │
+│ 00:04 │ 4        │ Person │ leaving   │ main_gate │ Person in dark hoodie walking away from the main gate │
+│       │          │        │           │           │ toward the road                                       │
+└───────┴──────────┴────────┴───────────┴───────────┴───────────────────────────────────────────────────────┘
+
+$ python -m drone_security_agent query "alerts after 22:00"
+3 result(s) - mode=alerts filters={'start': '22:00'}
+┌───────┬──────────┬───────────────┬────────────────────────────────────────────────────────────────────────┐
+│ ts    │ frame_id │ severity_name │ message                                                                │
+├───────┼──────────┼───────────────┼────────────────────────────────────────────────────────────────────────┤
+│ 22:30 │ 87       │ HIGH          │ Suspicious activity: Grey sedan at perimeter fence (headlights off,    │
+│       │          │               │ circling), 22:30.                                                      │
+│ 23:10 │ 89       │ CRITICAL      │ 2 people tampering with entry point at warehouse, 23:10.               │
+│ 23:40 │ 91       │ CRITICAL      │ Drone battery critical (14%) - return-to-dock, 23:40.                  │
+└───────┴──────────┴───────────────┴────────────────────────────────────────────────────────────────────────┘
+
+$ python -m drone_security_agent ask "What objects were in the video?"
+analyst=offline
+Q: What objects were in the video?
+A: Objects detected (vehicle: 12, person: 10, animal: 2, package: 2, gate: 1):
+- Person: 4 sighting(s), 00:01-00:04, at main gate
+- Fox: 1 sighting(s), 00:40-00:40, at backyard
+- Person: 1 sighting(s), 02:15-02:15, at perimeter fence
+- Person: 1 sighting(s), 02:16-02:16, at perimeter fence
+- White Toyota Camry [MH12AB1234]: 1 sighting(s), 06:45-06:45, at parking lot
+- Blue Ford F150 [MH14CD5678]: 6 sighting(s), 07:30-17:45, at main gate, driveway, garage
+- White Mercedes Sprinter: 2 sighting(s), 08:05-08:20, at loading dock
+- 2 people: 1 sighting(s), 08:05-08:05, at loading dock
+- Courier: 2 sighting(s), 09:10-09:12, at front door
+- Package: 2 sighting(s), 09:10-10:40, at front door
+- Red Honda Civic: 2 sighting(s), 13:15-21:05, at parking lot
+- Dog: 1 sighting(s), 14:30-14:30, at backyard
+- Gate: 1 sighting(s), 19:30-19:30, at main gate
+- Grey sedan: 1 sighting(s), 22:30-22:30, at perimeter fence
+- 2 people: 1 sighting(s), 23:10-23:10, at warehouse
+
+$ python -m drone_security_agent ask "How many times did the blue Ford F150 enter?"
+analyst=offline
+Q: How many times did the blue Ford F150 enter?
+A: Blue Ford F150: entered 2 time(s) at 07:30, 17:45. Timeline: 07:30 entering at main gate (frame 31); 07:32
+driving at driveway (frame 32); 12:00 parked at garage (frame 50); 16:20 exiting at garage (frame 65); 16:22 
+exiting at main gate (frame 66); 17:45 entering at main gate (frame 71)
+
+$ python -m drone_security_agent ask "Summarize the video"
+analyst=offline
+Q: Summarize the video
+A: Between 00:01 and 23:50 the drone indexed 92 frames and tracked 5 distinct vehicles and 6 distinct persons
+(the Blue Ford F150 entered 2 times), raising 10 alerts - most serious: Perimeter breach: Person climbing the
+perimeter fence, 02:15 [CRITICAL].

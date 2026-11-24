@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Drone Security Analyst Agent - Report</title>
+<style>
+  @page { size: A4; margin: 16mm 15mm 16mm 15mm; }
+  :root { --ink:#1b2430; --muted:#5b6675; --line:#d8dee6; --accent:#0b6bcb; --soft:#f3f6fa; --crit:#b42318; --high:#c2410c; --med:#a16207; --info:#0e7490; }
+  body { font-family: "Segoe UI", Arial, sans-serif; color: var(--ink); font-size: 10.4pt; line-height: 1.45; margin: 0; background:#fff; }
+  h1 { font-size: 22pt; margin: 0 0 2mm; letter-spacing: -0.3px; }
+  h2 { font-size: 13.5pt; margin: 7mm 0 2mm; padding-bottom: 1mm; border-bottom: 2px solid var(--accent); break-after: avoid; }
+  h3 { font-size: 11pt; margin: 4mm 0 1.5mm; break-after: avoid; }
+  p { margin: 1.2mm 0 2mm; }
+  .sub { color: var(--muted); font-size: 10.5pt; margin-bottom: 4mm; }
+  table { border-collapse: collapse; width: 100%; margin: 2mm 0 3mm; font-size: 9.2pt; break-inside: avoid; }
+  th, td { border: 1px solid var(--line); padding: 1.4mm 2mm; text-align: left; vertical-align: top; }
+  th { background: var(--soft); font-weight: 600; }
+  code, pre { font-family: Consolas, "Cascadia Mono", monospace; font-size: 8.6pt; }
+  pre { background: #0f1720; color: #dbe4ee; padding: 3mm; border-radius: 2mm; white-space: pre-wrap; break-inside: avoid; margin: 2mm 0 3mm; }
+  .callout { background: var(--soft); border-left: 3px solid var(--accent); padding: 2mm 3mm; margin: 2mm 0 3mm; break-inside: avoid; }
+  .kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2.5mm; margin: 3mm 0; }
+  .kpi { border: 1px solid var(--line); border-radius: 2mm; padding: 2mm 3mm; }
+  .kpi b { display:block; font-size: 15pt; color: var(--accent); }
+  .kpi span { color: var(--muted); font-size: 8.6pt; }
+  .sev { font-weight: 700; font-size: 8.4pt; }
+  .CRITICAL { color: var(--crit); } .HIGH { color: var(--high); } .MEDIUM { color: var(--med); } .LOW { color:#15803d; } .INFO { color: var(--info); }
+  ul { margin: 1mm 0 2mm; padding-left: 5mm; } li { margin: 0.6mm 0; }
+  .fig { text-align: center; margin: 2mm 0 3mm; break-inside: avoid; }
+  .fig figcaption { color: var(--muted); font-size: 8.6pt; margin-top: 1mm; }
+  .pb { break-before: page; }
+  .two { display: grid; grid-template-columns: 1fr 1fr; gap: 4mm; }
+</style>
+</head>
+<body>
+
+<h1>Drone Security Analyst Agent</h1>
+<div class="sub">FlytBase AI Engineer assignment: prototype report &nbsp;·&nbsp; November 2026 &nbsp;·&nbsp; Python 3.12, LangChain 1.5, Groq, Gemini vision, SQLite FTS5</div>
+
+<div class="kpis">
+  <div class="kpi"><b>10 / 10</b><span>scripted incidents detected; 0 security false alarms on 69 quiet-patrol/animal frames</span></div>
+  <div class="kpi"><b>~1,270 fps</b><span>end-to-end ingest (p99 2.0 ms per frame)</span></div>
+  <div class="kpi"><b>36 ms</b><span>"show all truck events" over a 50,000-frame index</span></div>
+  <div class="kpi"><b>8 / 8</b><span>real photos given a meaningful caption by Gemini vision (after prompt + self-check fixes)</span></div>
+</div>
+
+<h2>1. Problem and approach</h2>
+<p>A docked drone patrols a fixed property and streams telemetry and video. The owner needs two things: <b>immediate
+alerts</b> ("person loitering at the main gate at midnight") and a <b>searchable memory</b> ("a blue Ford F150 entered twice
+today", "show all truck events"). I built a streaming pipeline that turns each frame into a caption, then into structured
+detections, then into tracked entities, and evaluates rule-based alerts on the result. Every frame is written to a queryable index, and a LangChain analyst agent (Groq gpt-oss-120b) sits on top for
+summaries, recommendations and follow-up questions.</p>
+
+<figure class="fig">
+<svg viewBox="0 0 760 250" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, Arial" font-size="11">
+  <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#5b6675"/></marker></defs>
+  <g fill="#fff" stroke="#0b6bcb" stroke-width="1.4">
+    <rect x="8" y="30" width="105" height="70" rx="8"/>
+    <rect x="140" y="30" width="105" height="70" rx="8"/>
+    <rect x="272" y="30" width="105" height="70" rx="8"/>
+    <rect x="404" y="30" width="105" height="70" rx="8"/>
+    <rect x="536" y="30" width="105" height="70" rx="8"/>
+  </g>
+  <g fill="#f3f6fa" stroke="#5b6675" stroke-width="1.2">
+    <rect x="272" y="160" width="170" height="62" rx="8"/>
+    <rect x="470" y="160" width="140" height="62" rx="8"/>
+    <rect x="640" y="125" width="112" height="97" rx="8"/>
+    <rect x="668" y="30" width="84" height="70" rx="8"/>
+  </g>
+  <g text-anchor="middle" fill="#1b2430">
+    <text x="60" y="55" font-weight="700">Drone feed</text><text x="60" y="72">frames +</text><text x="60" y="87">telemetry</text>
+    <text x="192" y="55" font-weight="700">1 Describe</text><text x="192" y="72">VLM caption</text><text x="192" y="87">sim | Gemini | BLIP</text>
+    <text x="324" y="55" font-weight="700">2 Detect</text><text x="324" y="72">caption to typed</text><text x="324" y="87">objects + actions</text>
+    <text x="456" y="55" font-weight="700">3 Track</text><text x="456" y="72">entity re-ID,</text><text x="456" y="87">visits, dwell</text>
+    <text x="588" y="55" font-weight="700">4 Rules</text><text x="588" y="72">13 rules, merge,</text><text x="588" y="87">cooldown</text>
+    <text x="710" y="58" font-weight="700">Alerts</text><text x="710" y="75">+ actions</text><text x="710" y="90">+ log</text>
+    <text x="357" y="184" font-weight="700">5 Index (SQLite)</text><text x="357" y="200">frames, detections, alerts</text><text x="357" y="214">B-tree + FTS5 / BM25</text>
+    <text x="540" y="184" font-weight="700">Context manager</text><text x="540" y="200">recent, hourly digests,</text><text x="540" y="214">entities (bounded)</text>
+    <text x="696" y="150" font-weight="700">Analyst agent</text><text x="696" y="167">LangChain +</text><text x="696" y="182">Groq, 6 tools</text><text x="696" y="198">or offline router</text><text x="696" y="213">Q&amp;A, summary</text>
+  </g>
+  <g stroke="#5b6675" stroke-width="1.3" fill="none" marker-end="url(#a)">
+    <path d="M113,65 H138"/><path d="M245,65 H270"/><path d="M377,65 H402"/><path d="M509,65 H534"/><path d="M641,65 H666"/>
+    <path d="M324,100 V158"/><path d="M588,100 V125 H357 V158"/><path d="M600,100 V158"/>
+    <path d="M442,205 Q560,240 638,200"/><path d="M610,185 H638"/>
+  </g>
+</svg>
+<figcaption>Figure 1. Pipeline. Each stage is a pure function in-process; the stage boundaries are where message queues go in production.</figcaption>
+</figure>
+
+<h2>2. Assumptions</h2>
+<ul>
+  <li><b>Dataset.</b> As the brief allows, video frames are simulated as text captions, and telemetry comes from a small physical model
+  (GPS per zone, altitude by mode, battery drain per 90-minute sortie). I wrote a <b>24-hour scripted day</b> (92 frames, 27 events + routine patrol frames)
+  in which each event targets one requirement: midnight loitering, a fence climb, a blue F150 entering twice, a whitelisted staff car,
+  an unattended package, the gate left open, a car circling with headlights off, warehouse tampering, an altitude breach and a critical battery.
+  Using a scripted scenario rather than a public dataset gives a <i>golden test</i> with known ground truth.
+  For scale, a seeded procedural generator produces any number of frames.</li>
+  <li><b>Property.</b> One site with 9 named zones (gate, driveway, garage, front door, parking lot, loading dock, warehouse,
+  backyard, perimeter fence). The warehouse and fence are restricted after hours. Night is 22:00–06:00 and business hours are 07:00–19:00. All of this is in YAML.</li>
+  <li><b>Identity.</b> Vehicles are re-identified by plate. When no plate is visible, a colour+make+model signature is used, and it is linked to the plate once both are seen together.
+  People are distinguished by clothing description only. No face recognition, by design (privacy).</li>
+  <li><b>Real images.</b> To test the VLM on real pixels, a script downloads 8 openly licensed Wikimedia Commons photos (fence climb,
+  night gate, pickup with plate, loading dock, packages, dog, parking lot, a person with a light at night). Each is replayed at a time and zone (a
+  "manifest") so the time-dependent rules apply. These are ground-level photos, not drone footage. No public drone dataset was used because of time; that is the main
+  external-validity gap.</li>
+  <li><b>Models.</b> Gemini vision (free tier) captions real images; Groq <code>openai/gpt-oss-120b</code> (free tier, fast) runs the
+  agent. Claude and local BLIP remain alternative backends behind the same interface. Keys live in a gitignored <code>.env</code>.</li>
+</ul>
+
+<h2>3. Tool and model choices</h2>
+<table>
+<tr><th style="width:20%">Choice</th><th>Why</th><th style="width:28%">Alternatives considered</th></tr>
+<tr><td><b>Gemini vision</b> as the VLM (Flash family)</td><td>A security caption needs reasoning, not only object names: <i>climbing</i> vs <i>standing</i>, reading a plate, a guard vs an intruder. An instruction-following VLM can be told exactly what a security log needs (people, vehicles with make/plate, action, zone, suspicious cues) in one sentence the parser understands. Gemini has a free tier, so it is a good fit for a prototype. Temperature 0. Overloaded models (503s were common during testing) fail over to the next Flash model, and the last working model is tried first.</td><td><b>BLIP</b> (implemented, local, free) gives generic captions with no make, plate or intent. <b>CLIP</b> is not a captioner: it scores image–text similarity. It is ideal for an embedding search index (future work) but cannot write the log. <b>Claude vision</b> is implemented as an alternative.</td></tr>
+<tr><td><b>Deterministic detector + rules</b></td><td>Per-frame analysis runs on every frame, so it must be fast, cheap, explainable and testable: about 0.6 ms/frame, zero cost, exact unit tests. Rules are pure functions with thresholds in YAML.</td><td>An LLM per frame would cost thousands of calls a day and could not be tested deterministically.</td></tr>
+<tr><td><b>SQLite + FTS5</b> index</td><td>Zero-ops, ships with Python, and supports B-tree time/object/zone queries plus BM25 full-text search in one file. An enriched <code>tags</code> column means "truck" finds "Blue Ford F150 parked at the garage".</td><td>Postgres + pgvector / OpenSearch at fleet scale; a vector DB alone is weak at exact time-range filters.</td></tr>
+<tr><td><b>LangChain <code>create_agent</code> + Groq</b> (<code>openai/gpt-oss-120b</code>)</td><td>Groq's free tier and very low latency suit interactive Q&amp;A, and gpt-oss-120b was the strongest tool-calling model available on the account. The provider is a single setting (Groq, Claude or offline). Tool-using agent over 6 grounded tools. The system prompt carries a bounded context snapshot, so simple questions need zero tool calls and detailed ones trigger retrieval. A sliding-window memory supports follow-ups.</td><td>A single summarisation prompt over all frames does not scale past a few thousand frames.</td></tr>
+<tr><td><b>Offline analyst</b></td><td>The same toolkit with a regex intent router, so the demo, CI and reviewers work without an API key.</td><td>none</td></tr>
+</table>
+
+<h3>Agent design and context management</h3>
+<p>The challenge in "use context throughout the video" is that a day of footage does not fit in a prompt. <code>ContextManager</code> keeps
+three tiers, updated while frames stream: (1) a ring buffer of recent frames, (2) per-hour digests (label counts, zones, alerts), and
+(3) entity memory plus the full index, which is retrieved on demand. <code>build_context(question)</code> fills a character budget in priority
+order: alerts, then entities, hourly digests, frames retrieved by FTS for <i>this</i> question, and recent frames. Prompt size is therefore
+<b>about 8k characters for both 92 and 50,000 frames</b>, and exact details are always one tool call away. Every factual claim must cite HH:MM and a frame id.</p>
+
+<div class="pb"></div>
+<h2>4. Results</h2>
+<h3>Frame descriptions to logs and alerts (excerpt from <code>run</code>)</h3>
+<pre>Time: 00:03, Location: Main Gate, Alt 25 m, Battery 98%, Mode HOVER
+  Frame 3: Person in dark hoodie loitering at the main gate, checking the gate latch
+  LOG   Person spotted at main gate, 00:03. [loitering | sighting #3]
+  ALERT HIGH Person loitering at main gate, 00:01 (dwell 2 min, still present 00:03).
+        -> Activate gate floodlight and two-way speaker warning; continue drone overwatch.
+Time: 12:00, Location: Garage, Alt 25 m, Battery 100%, Mode HOVER
+  Frame 50: Blue Ford F150 parked at the garage
+  LOG   Blue Ford F150 spotted at garage, 12:00. [parked | plate MH14CD5678 | entries today: 1 | sighting #3]
+Time: 17:45, Location: Main Gate, Alt 25 m, Battery 40%, Mode HOVER
+  Frame 71: Blue Ford F150 pickup truck entering through the main gate, plate MH14CD5678
+  ALERT INFO Blue Ford F150 entered twice today (07:30, 17:45).
+Time: 23:10, Location: Warehouse, Alt 25 m, Battery 68%, Mode HOVER
+  Frame 89: Two people near the warehouse door with a flashlight, testing the door handle
+  ALERT CRITICAL 2 people tampering with entry point at warehouse, 23:10. (+RESTRICTED_ZONE, SUSPICIOUS_BEHAVIOR)
+        -> Dispatch guard immediately; trigger siren/spotlight; preserve footage as evidence.</pre>
+
+<h3>All alerts for the scripted day</h3>
+<table>
+<tr><th>Time</th><th>Severity</th><th>Rule</th><th>Message</th></tr>
+<tr><td>00:03</td><td class="sev HIGH">HIGH</td><td>NIGHT_LOITERING</td><td>Person loitering at main gate, 00:01 (dwell 2 min)</td></tr>
+<tr><td>02:15</td><td class="sev CRITICAL">CRITICAL</td><td>PERIMETER_BREACH</td><td>Perimeter breach: Person climbing the perimeter fence</td></tr>
+<tr><td>02:16</td><td class="sev CRITICAL">CRITICAL</td><td>RESTRICTED_ZONE</td><td>Person in restricted zone (perimeter fence) after hours</td></tr>
+<tr><td>10:40</td><td class="sev LOW">LOW</td><td>UNATTENDED_PACKAGE</td><td>Package unattended at front door for 90 min</td></tr>
+<tr><td>15:10</td><td class="sev HIGH">HIGH</td><td>DRONE_ALTITUDE</td><td>Drone altitude 131 m exceeds 120 m ceiling</td></tr>
+<tr><td>17:45</td><td class="sev INFO">INFO</td><td>REPEAT_VEHICLE</td><td>Blue Ford F150 entered twice today (07:30, 17:45)</td></tr>
+<tr><td>19:30</td><td class="sev MEDIUM">MEDIUM</td><td>GATE_OPEN_AFTER_HOURS</td><td>Main gate left open after hours</td></tr>
+<tr><td>22:30</td><td class="sev HIGH">HIGH</td><td>SUSPICIOUS_BEHAVIOR</td><td>Grey sedan at perimeter (headlights off, circling) (+AFTER_HOURS_VEHICLE)</td></tr>
+<tr><td>23:10</td><td class="sev CRITICAL">CRITICAL</td><td>TAMPERING</td><td>2 people tampering with entry point at warehouse (+2 merged rules)</td></tr>
+<tr><td>23:40</td><td class="sev CRITICAL">CRITICAL</td><td>DRONE_LOW_BATTERY</td><td>Drone battery critical (14%), return-to-dock</td></tr>
+</table>
+<p>The negative cases matter as much: the fox at 00:40, the dog at 14:30, the quiet patrol frames (69 frames with no people or vehicles), the whitelisted staff Camry at 06:45 and the daytime delivery van raised <b>no</b> alerts.</p>
+
+<div class="two">
+<div>
+<h3>Indexed frame queries</h3>
+<pre>$ query "show all truck events"
+6 results  filters={'subtype': 'truck'}
+07:30 #31 entering @ main_gate
+07:32 #32 driving  @ driveway
+12:00 #50 parked   @ garage  &lt;- caption has no "truck"
+16:20 #65 exiting  @ garage
+16:22 #66 exiting  @ main_gate
+17:45 #71 entering @ main_gate
+
+$ query "people at the main gate at night"
+filters={'start':'22:00','end':'06:00',
+ 'object_type':'person','zone':'main_gate'}
+00:01 standing / 00:02 standing /
+00:03 loitering / 00:04 leaving</pre>
+</div>
+<div>
+<h3>Agent follow-up Q&amp;A (bonus)</h3>
+<pre>Q: How many times did the blue Ford F150 enter?
+A: Blue Ford F150: entered 2 time(s) at 07:30,
+   17:45. Timeline: 07:30 entering at main gate
+   (frame 31); 07:32 driving at driveway (frame
+   32); 12:00 parked at garage (frame 50); ...
+
+Q: Summarize the video   (1-sentence summary)
+A: Between 00:01 and 23:50 the drone indexed 92
+   frames and tracked 5 distinct vehicles and 6
+   distinct persons (the Blue Ford F150 entered
+   2 times), raising 10 alerts - most serious:
+   Perimeter breach: Person climbing the
+   perimeter fence, 02:15 [CRITICAL].</pre>
+</div>
+</div>
+
+<h3>Agent recommendations (generated from whole-day patterns)</h3>
+<ul>
+<li>After-hours hot-spots: perimeter fence (3), main gate (1), warehouse (1). Add motion-triggered floodlights and shift extra drone patrols to 22:00–03:00.</li>
+<li>Perimeter breach detected: inspect the fence line and consider vibration sensors to cue the drone automatically.</li>
+<li>Blue Ford F150 (plate MH14CD5678) entered 2 times: confirm it is a known vehicle and whitelist it, or flag it.</li>
+<li>Drone hit critical battery during a night patrol: add a battery swap before 23:00 so coverage is not lost at the riskiest hour.</li>
+</ul>
+
+<h3>Scalability test (50,000 frames, about 28 h of footage)</h3>
+<table>
+<tr><th>Ingest throughput</th><th>Per-frame latency</th><th>Truck events (2,475 rows)</th><th>People at gate at night</th><th>Alerts ≥ HIGH</th><th>LLM context</th></tr>
+<tr><td>~1,270 frames/s</td><td>p50 0.64 ms · p99 2.0 ms</td><td>36 ms</td><td>13 ms</td><td>11 ms</td><td>8,029 chars (constant)</td></tr>
+</table>
+<p>Analytics and storage are roughly 1000× faster than real time; with a real VLM, captioning (0.5–2 s per keyframe) is the bottleneck,
+which is why only keyframes or motion-triggered frames should be captioned in production.</p>
+
+<h3>Real images through the VLM (<code>python -m drone_security_agent images</code>)</h3>
+<table>
+<tr><th style="width:15%">Image (replayed as)</th><th>Gemini caption (abridged)</th><th style="width:22%">Pipeline result</th></tr>
+<tr><td>Fence climb, 02:20 perimeter fence</td><td>"…one man wearing a black jacket… is climbing over while carrying a black briefcase, and another man… is climbing over a gate…"</td><td><span class="sev CRITICAL">CRITICAL</span> PERIMETER_BREACH</td></tr>
+<tr><td>Guard at barrier, 00:05 main gate</td><td>"…one adult male security guard wearing a dark blue polo shirt… stands beside a security booth… a white sedan and a white SUV are parked in the background street"</td><td>Guard logged (no alert); <span class="sev MEDIUM">MEDIUM</span> after-hours vehicle, a debatable alert (see below)</td></tr>
+<tr><td>Pickup, 07:31 driveway</td><td>"A white Dodge Ram 3500 pickup truck with license plate WOS-947 is parked in the driveway."</td><td>White Dodge Ram, plate WOS947 (daytime, no alert)</td></tr>
+<tr><td>Person with light, 23:15 warehouse</td><td>"One person wearing dark clothing and a headlamp is standing on top of a hill…"</td><td><span class="sev CRITICAL">CRITICAL</span> RESTRICTED_ZONE</td></tr>
+<tr><td>Loading dock / packages / dog / parking lot</td><td>Mercedes truck and van at the dock; two people, one carrying a ribboned box; "a small white dog is running across the backyard"; about 1,000 parked cars</td><td>Logged, no alerts (correct)</td></tr>
+</table>
+<p><b>What went wrong first, and what I changed</b> (full table: <a href="../vlm_results.md">vlm_results.md</a>):</p>
+<ul>
+<li><b>Lazy negatives.</b> The first prompt allowed "Clear view, no activity" for empty scenes, and the small Flash-Lite model used that shortcut for
+the night gate (a guard and two cars), the loading dock truck, the dog and the parking lot. Fix 1: the prompt requires every person, vehicle (even parked), animal and package to be listed.
+Fix 2, a <b>self-check pass</b>: any "no activity" caption triggers a narrow second question ("list every person, vehicle, animal, package… or NONE"), and the
+caption is regenerated if anything is found. In one run it re-checked 2 captions and corrected both. It costs one extra call, only on frames that claim to be empty.</li>
+<li><b>Hint leakage.</b> The zone hint led the model to invent a "warehouse roof". The prompt now says the hint names the location but must not add objects.</li>
+<li><b>Parser bugs on real phrasing</b>, each now a regression test: "plate WDS-947 is parked" read as <code>WDS947IS</code>; "Dodge Ram" was unknown;
+"one carrying a briefcase… climbing" chose <i>carrying</i> over <i>climbing</i> (actions now ranked by security relevance); "climbing over a gate"
+moved the person to the main gate (zone words now count as locations only after "at/in/near…").</li>
+<li><b>Known limits.</b> Captions vary between runs (WDS-947 vs WOS-947 on a small, blurry plate), so captions are cached by image hash for
+repeatable demos. The parked cars at 00:05 are on the street outside the property, but a single caption cannot tell "on site" from "beyond the fence", so the after-hours vehicle alert there is a false positive. Fixing it needs geofenced image regions.</li>
+</ul>
+
+<h3>Validation</h3>
+<p>76 pytest cases (<a href="../TESTING.md">TESTING.md</a>): a golden test asserting the exact 10 alerts above; every rule with positive and negative
+cases ("alert triggered at midnight", "truck logged correctly", whitelist, cooldown, merge); index queries including windows that wrap midnight
+and on-disk persistence; 7 agent follow-up questions; context-budget enforcement; 500 fuzzed captions; out-of-order timestamps;
+emergency (fire) alerts emitted in under 50 ms; a 10k-frame scale test; Gemini model failover, the self-check pass and VLM-outage
+resilience (mocked, no network); real-VLM caption phrasings; and live end-to-end tests against Groq and Gemini.</p>
+
+<h3>Demo videos</h3>
+<p>Screen recordings with voiceover: <a href="https://drive.google.com/file/d/1kBkghCLg-n2GAupJo2UftY_kq_alLgo8/view?usp=drive_link">https://drive.google.com/file/d/1kBkghCLg-n2GAupJo2UftY_kq_alLgo8/view?usp=drive_link</a>, covering (1) architecture, (2) live processing and alerts,
+(3) frame index queries, (4) agent Q&amp;A, summary and recommendations, (5) real images through Gemini vision, (6) scalability benchmark, (7) test run.</p>
+
+<h2>5. What I would do with more time</h2>
+<ul>
+<li><b>Evaluate on real drone footage</b> (e.g. VisDrone / UCF-Crime clips) with labelled ground truth, and measure caption to detection precision and recall instead of 8 hand-checked photos. Add <b>structured-output captions</b>: the VLM returns JSON detections directly, with the regex parser as the fast path and a cross-check.</li>
+<li><b>Better VLM</b>: compare the full Flash/Pro models against Flash-Lite (used here because the larger models were overloaded), add multi-frame context so the model sees motion rather than single stills, and mask regions outside the property so off-site cars do not raise alerts.</li>
+<li><b>Embedding index</b>: CLIP/SigLIP image vectors alongside FTS5 for "find frames that look like this" and cross-day vehicle re-ID; a hybrid BM25 + vector ranker.</li>
+<li><b>Real detector and tracker</b> (YOLOv8 + ByteTrack) for bounding boxes, true dwell time and trajectories (e.g. a car circling detected from its path, not from the caption).</li>
+<li><b>Video summarisation at several levels</b>: per-hour, per-incident and per-day summaries written by the LLM from the digests, plus incident clips cut from the index.</li>
+<li><b>Learned baselines</b>: "unusual for this site at this hour", based on historical counts per zone and hour, rather than fixed rules only.</li>
+<li><b>Operations</b>: alert delivery (push/webhook/VMS), guard acknowledgement and escalation, drone re-tasking (send the drone to the alert zone), and multi-site Postgres storage with a retention policy.</li>
+</ul>
+
+<h2>6. How AI tools were used</h2>
+<p><b>Claude Code (Claude Opus 5.5)</b> was used as an agentic pair-programmer throughout (<a href="../AI_TOOLS.md">AI_TOOLS.md</a>):</p>
+<ul>
+<li><b>Environment:</b> it detected that Python was missing, installed Python 3.12 with winget, built the venv and confirmed SQLite FTS5 support.</li>
+<li><b>Design:</b> it turned the brief into requirements with acceptance criteria and proposed the caption-then-parse pipeline and the SQLite + FTS5 index. I chose deterministic per-frame analytics, with the LLM only at the edges, for cost and testability.</li>
+<li><b>AI-generated components:</b> the object/action extraction logic, the 13 alert rules, the natural-language query parser, tiered context management and the LangChain agent. Before writing the agent it looked up the current Claude API (model ids, effort, refusal fallbacks) instead of relying on memory.</li>
+<li><b>QA:</b> it generated the test suite and benchmark. Running them, rather than reading code, caught real bugs: Rich markup swallowing log details, repetitive recommendations, and triple alerts for a single event (which led to alert merging).</li>
+<li><b>Model integration:</b> it added Groq and Gemini, listed the models each key could use, and picked from what was actually available (retired and overloaded models were found by calling the API, not assumed). It found the "lazy negative" captions by looking at the photos and comparing them with the captions, then designed the self-check pass.</li>
+<li><b>Learning:</b> FTS5 external-content tables, BM25 ranking, LangChain 1.x <code>create_agent</code> and context budgeting were new to me; the AI explained each one and I verified it by running code.</li>
+</ul>
+<div class="callout"><b>Summary:</b> AI made a tested, documented end-to-end prototype possible in a single working session. The process that made it reliable was AI generation followed by execution and tests, then fixes.</div>
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+┌───────────────────────────── Ingest (describe->detect->track->rules->index) ──────────────────────────────┐
+│ Frames: 50,000  |  detections: 27,495  |  alerts: 4,444  |  entities: 85                                  │
+│ Ingest: 39.42s -> 1,268 frames/s  |  per-frame latency p50 0.636 ms, p99 2.042 ms                         │
+└───────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+                        Query latency                        
+┌───────────────────────────────────────────┬───────┬───────┐
+│ Query                                     │  Rows │    ms │
+├───────────────────────────────────────────┼───────┼───────┤
+│ natural: show all truck events            │ 2,475 │ 36.11 │
+│ natural: people at the main gate at night │   440 │ 12.66 │
+│ structured: vehicles 07:00-09:00          │ 1,084 │ 14.38 │
+│ full-text: 'blue ford loitering'          │   100 │ 19.76 │
+│ alerts >= HIGH                            │   834 │ 10.76 │
+│ stats()                                   │     1 │ 61.15 │
+└───────────────────────────────────────────┴───────┴───────┘
+LLM context snapshot stays bounded: 8,029 chars for 50,000 frames.

@@ -1,0 +1,1566 @@
+[
+  {
+    "frame_id": 1,
+    "ts": "2026-11-23T00:01:00",
+    "description": "Person in dark hoodie standing near the main gate, looking around",
+    "telemetry": {
+      "ts": "2026-11-23T00:01:00",
+      "lat": 18.520086,
+      "lon": 73.855972,
+      "altitude_m": 25.0,
+      "heading_deg": 233.7,
+      "speed_mps": 0.0,
+      "battery_pct": 99.2,
+      "zone": "main_gate",
+      "flight_mode": "HOVER"
+    },
+    "image_path": null
+  },
+  {
+    "frame_id": 2,
+    "ts": "2026-11-23T00:02:00",
+    "description": "Person in dark hoodie still standing at the main gate, pacing slowly",
+    "telemetry": {
+      "ts": "2026-11-23T00:02:00",
+      "lat": 18.520066,
+      "lon": 73.856003,
+      "altitude_m": 25.0,
+      "heading_deg": 131.3,
+      "speed_mps": 0.0,
+      "battery_pct": 98.4,
+      "zone": "main_gate",
+      "flight_mode": "HOVER"
+    },
+    "image_path": null
+  },
+  {
+    "frame_id": 3,
+    "ts": "2026-11-23T00:03:00",
+    "description": "Person in dark hoodie loitering at the main gate, checking the gate latch",
+    "telemetry": {
+      "ts": "2026-11-23T00:03:00",
+      "lat": 18.520065,
+      "lon": 73.856001,
+      "altitude_m": 25.0,
+      "heading_deg": 13.5,
+      "speed_mps": 0.0,
+      "battery_pct": 97.6,
+      "zone": "main_gate",
+      "flight_mode": "HOVER"
+    },
+    "image_path": null
+  },
+  {
+    "frame_id": 4,
+    "ts": "2026-11-23T00:04:00",
+    "description": "Person in dark hoodie walking away from the main gate toward the road",
+    "telemetry": {
+      "ts": "2026-11-23T00:04:00",
+      "lat": 18.520095,
+      "lon": 73.855966,
+      "altitude_m": 25.0,
+      "heading_deg": 32.6,
+      "speed_mps": 0.0,
+      "battery_pct": 96.8,
+      "zone": "main_gate",
+      "flight_mode": "HOVER"
+    },
+    "image_path": null
+  },
+  {
+    "frame_id": 5,
+    "ts": "2026-11-23T00:10:00",
+    "description": "Main gate empty, lighting normal",
+    "telemetry": {
+      "ts": "2026-11-23T00:10:00",
+      "lat": 18.520094,
+      "lon": 73.856026,
+      "altitude_m": 42.7,
+      "heading_deg": 80.1,
+      "speed_mps": 6.5,
+      "battery_pct": 92.0,
+      "zone": "main_gate",
+      "flight_mode": "PATROL"
+    },
+    "image_path": null
+  },
+  {
+    "frame_id": 6,
+    "ts": "2026-11-23T00:30:00",
+    "description": "Routine patrol over the driveway, area quiet",
+    "telemetry": {
+      "ts": "2026-11-23T00:30:00",
+      "lat": 18.520286,
+      "lon": 73.856306,
+      "altitude_m": 44.4,
+      "heading_deg": 350.5,
+      "speed_mps": 4.2,
+      "battery_pct": 76.0,
+      "zone": "driveway",
+      "flight_mode": "PATROL"
+    },
+    "image_path": null
+  },
+  {
+    "frame_id": 7,
+    "ts": "2026-11-23T00:40:00",
+    "description": "Fox crossing the backyard lawn",
+    "telemetry": {
+      "ts": "2026-11-23T00:40:00",
+      "lat": 18.521029,
+      "lon": 73.856483,
+      "altitude_m": 25.0,
+      "heading_deg": 51.8,
+      "speed_mps": 0.0,
+      "battery_pct": 68.0,
+      "zone": "backyard",
+      "flight_mode": "HOVER"
+    },
+    "image_path": null
+  },
+  {
+    "frame_id": 8,
+    "ts": "2026-11-23T00:50:00",
+    "description": "No people or vehicles visible at the garage",
+    "telemetry": {
+      "ts": "2026-11-23T00:50:00",
+      "lat": 18.520469,
+      "lon": 73.856385,
+      "altitude_m": 46.9,
+      "heading_deg": 64.9,
+      "speed_mps": 6.3,
+      "battery_pct": 60.0,
+      "zone": "garage",
+      "flight_mode": "PATROL"
+    },
+    "image_path": null
+  },
+  {
+    "frame_id": 9,
+    "ts": "2026-11-23T01:10:00",
+    "description": "Clear view of the front door, no activity",
+    "telemetry": {
+      "ts": "2026-11-23T01:10:00",
+      "lat": 18.520611,
+      "lon": 73.85659,
+      "altitude_m": 45.3,
+      "heading_deg": 22.5,
+      "speed_mps": 4.2,
+      "battery_pct": 44.0,
+      "zone": "front_door",
+      "flight_mode": "PATROL"
+    },
+    "image_path": null
+  },
+  {
+    "frame_id": 10,
+    "ts": "2026-11-23T01:30:00",
+    "description": "Clear view of the parking lot, no activity",
+    "telemetry": {
+      "ts": "2026-11-23T01:30:00",
+      "lat": 18.520276,
+      "lon": 73.856914,
+      "altitude_m": 44.6,
+      "heading_deg": 112.8,
+      "speed_mps": 6.3,
+      "battery_pct": 100.0,
+      "zone": "parking_lot",
+      "flight_mode": "PATROL"
+    },
+    "image_path": null
+  },
+  {
+    "frame_id": 11,
+    "ts": "2026-11-23T01:50:00",
+    "description": "Clear view of the loading dock, no activity",
+    "telemetry": {
+      "ts": "2026-11-23T01:50:00",
+      "lat": 18.520696,
+      "lon": 73.857084,
+      "altitude_m": 46.8,
+      "heading_deg": 250.9,
+      "speed_mps": 5.0,
+      "battery_pct": 84.0,
+      "zone": "loading_dock",
+      "flight_mode": "PATROL"
+    },
+    "image_path": null
+  },
+  {
+    "frame_id": 12,
+    "ts": "2026-11-23T02:10:00",
+    "description": "Warehouse empty, lighting normal",
+    "telemetry": {
+      "ts": "2026-11-23T02:10:00",
+      "lat": 18.520906,
+      "lon": 73.857002,
+      "altitude_m": 47.3,
+      "heading_deg": 261.9,
+      "speed_mps": 5.2,
+      "battery_pct": 68.0,
+      "zone": "warehouse",
+      "flight_mode": "PATROL"
+    },
+    "image_path": null
+  },
+  {
+    "frame_id": 13,
+    "ts": "2026-11-23T02:15:00",
+    "description": "Person climbing the perimeter fence near the north corner",
+    "telemetry": {
+      "ts": "2026-11-23T02:15:00",
+      "lat": 18.521238,
+      "lon": 73.856169,
+      "altitude_m": 25.0,
+      "heading_deg": 150.1,
+      "speed_mps": 0.0,
+      "battery_pct": 64.0,
+      "zone": "perimeter_fence",
+      "flight_mode": "HOVER"
+    },
+    "image_path": null
+  },
+  {
+    "frame_id": 14,
+    "ts": "2026-11-23T02:16:00",
+    "description": "Person in black jacket running along the inside of the perimeter fence carrying a bag",
+    "telemetry": {
+      "ts": "2026-11-23T02:16:00",
+      "lat": 18.521221,
+      "lon": 73.856172,
+      "altitude_m": 25.0,
+      "heading_deg": 175.5,
+      "speed_mps": 0.0,
+      "battery_pct": 63.2,
+      "zone": "perimeter_fence",
+      "flight_mode": "HOVER"
+    },
+    "image_path": null
+  },
+  {
+    "frame_id": 15,
+    "ts": "2026-11-23T02:30:00",
+    "description": "Clear view of the backyard, no activity",
+    "telemetry": {
+      "ts": "2026-11-23T02:30:00",
+      "lat": 18.520963,
+      "lon": 73.856513,
+      "altitude_m": 46.6,
+      "heading_deg": 205.7,
+      "speed_mps": 7.5,
+      "battery_pct": 52.0,
+      "zone": "backyard",
+      "flight_mode": "PATROL"
+    },
+    "image_path": null
+  },
+  {
+    "frame_id": 16,
+    "ts": "2026-11-23T02:50:00",
+    "description": "Routine patrol over the perimeter fence, area quiet",
+    "telemetry": {
+      "ts": "2026-11-23T02:50:00",
+      "lat": 18.521185,
+      "lon": 73.856216,
+      "altitude_m": 45.6,
+      "heading_deg": 208.2,
+      "speed_mps": 5.8,
+      "battery_pct": 36.0,
+      "zone": "perimeter_fence",
+      "flight_mode": "PATROL"
+    },
+    "image_path": null
+  },
+  {
+    "frame_id": 17,
+    "ts": "2026-11-23T03:10:00",
+    "description": "Clear view of the main gate, no activity",
+    "telemetry": {
+      "ts": "2026-11-23T03:10:00",
+      "lat": 18.520127,
+      "lon": 73.856036,
+      "altitude_m": 44.8,
+      "heading_deg": 238.4,
+      "speed_mps": 4.2,
+      "battery_pct": 92.0,
+      "zone": "main_gate",
+      "flight_mode": "PATROL"
+    },
+    "image_path": null
+  },
+  {
+    "frame_id": 18,
+    "ts": "2026-11-23T03:30:00",
+    "description": "Clear view of the driveway, no activity",
+    "telemetry": {
+      "ts": "2026-11-23T03:30:00",
+      "lat": 18.520266,
+      "lon": 73.856312,
+      "altitude_m": 48.0,
+      "heading_deg": 295.1,
+      "speed_mps": 5.1,
+      "battery_pct": 76.0,
+      "zone": "driveway",
+      "flight_mode": "PATROL"
+    },
+    "image_path": null
+  },
+  {
+    "frame_id": 19,
+    "ts": "2026-11-23T03:50:00",
+    "description": "No people or vehicles visible at the garage",
+    "telemetry": {
+      "ts": "2026-11-23T03:50:00",
+      "lat": 18.520491,
+      "lon": 73.856413,
+      "altitude_m": 42.1,
+      "heading_deg": 165.7,
+      "speed_mps": 4.7,
+      "battery_pct": 60.0,
+      "zone": "garage",
+      "flight_mode": "PATROL"
+    },
+    "image_path": null
+  },
+  {
+    "frame_id": 20,
+    "ts": "2026-11-23T04:10:00",
+    "description": "No people or vehicles visible at the front door",
+    "telemetry": {
+      "ts": "2026-11-23T04:10:00",
+      "lat": 18.520569,
+      "lon": 73.856565,
+      "altitude_m": 46.6,
+      "heading_deg": 46.4,
+      "speed_mps": 5.0,
+      "battery_pct": 44.0,
+      "zone": "front_door",
+      "flight_mode": "PATROL"
+    },
+    "image_path": null
+  },
+  {
+    "frame_id": 21,
+    "ts": "2026-11-23T04:30:00",
+    "description": "Clear view of the parking lot, no activity",
+    "telemetry": {
+      "ts": "2026-11-23T04:30:00",
+      "lat": 18.520291,
+      "lon": 73.85693,
+      "altitude_m": 42.5,
+      "heading_deg": 161.3,
+      "speed_mps": 6.2,
+      "battery_pct": 100.0,
+      "zone": "parking_lot",
+      "flight_mode": "PATROL"
+    },
+    "image_path": null
+  },
+  {
+    "frame_id": 22,
+    "ts": "2026-11-23T04:50:00",
+    "description": "Routine patrol over the loading dock, area quiet",
+    "telemetry": {
+      "ts": "2026-11-23T04:50:00",
+      "lat": 18.520731,
+      "lon": 73.857126,
+      "altitude_m": 47.2,
+      "heading_deg": 100.0,
+      "speed_mps": 5.7,
+      "battery_pct": 84.0,
+      "zone": "loading_dock",
+      "flight_mode": "PATROL"
+    },
+    "image_path": null
+  },
+  {
+    "frame_id": 23,
+    "ts": "2026-11-23T05:10:00",
+    "description": "Clear view of the warehouse, no activity",
+    "telemetry": {
+      "ts": "2026-11-23T05:10:00",
+      "lat": 18.520889,
+      "lon": 73.857031,
+      "altitude_m": 47.7,
+      "heading_deg": 54.2,
+      "speed_mps": 4.7,
+      "battery_pct": 68.0,
+      "zone": "warehouse",
+      "flight_mode": "PATROL"
+    },
+    "image_path": null
+  },
+  {
+    "frame_id": 24,
+    "ts": "2026-11-23T05:30:00",
+    "description": "No people or vehicles visible at the backyard",
+    "telemetry": {
+      "ts": "2026-11-23T05:30:00",
+      "lat": 18.520979,
+      "lon": 73.856479,
+      "altitude_m": 44.9,
+      "heading_deg": 211.5,
+      "speed_mps": 5.1,
+      "battery_pct": 52.0,
+      "zone": "backyard",
+      "flight_mode": "PATROL"
+    },
+    "image_path": null
+  },
+  {
+    "frame_id": 25,
+    "ts": "2026-11-23T05:50:00",
+    "description": "Clear view of the perimeter fence, no activity",
+    "telemetry": {
+      "ts": "2026-11-23T05:50:00",
+      "lat": 18.52116,
+      "lon": 73.856194,
+      "altitude_m": 44.2,
+      "heading_deg": 203.3,
+      "speed_mps": 7.8,
+      "battery_pct": 36.0,
+      "zone": "perimeter_fence",
+      "flight_mode": "PATROL"
+    },
+    "image_path": null
+  },
+  {
+    "frame_id": 26,
+    "ts": "2026-11-23T06:10:00",
+    "description": "Clear view of the main gate, no activity",
+    "telemetry": {
+      "ts": "2026-11-23T06:10:00",
+      "lat": 18.520115,
+      "lon": 73.856001,
+      "altitude_m": 45.7,
+      "heading_deg": 242.8,
+      "speed_mps": 4.2,
+      "battery_pct": 92.0,
+      "zone": "main_gate",
+      "flight_mode": "PATROL"
+    },
+    "image_path": null
+  },
+  {
+    "frame_id": 27,
+    "ts": "2026-11-23T06:30:00",
+    "description": "Routine patrol over the driveway, area quiet",
+    "telemetry": {
+      "ts": "2026-11-23T06:30:00",
+      "lat": 18.520282,
+      "lon": 73.856322,
+      "altitude_m": 47.2,
+      "heading_deg": 286.4,
+      "speed_mps": 5.6,
+      "battery_pct": 76.0,
+      "zone": "driveway",
+      "flight_mode": "PATROL"
+    },
+    "image_path": null
+  },
+  {
+    "frame_id": 28,
+    "ts": "2026-11-23T06:45:00",
+    "description": "White Toyota Camry parked in the parking lot, plate MH12AB1234",
+    "telemetry": {
+      "ts": "2026-11-23T06:45:00",
+      "lat": 18.520292,
+      "lon": 73.856868,
+      "altitude_m": 25.0,
+      "heading_deg": 227.7,
+      "speed_mps": 0.0,
+      "battery_pct": 64.0,
+      "zone": "parking_lot",
+      "flight_mode": "HOVER"
+    },
+    "image_path": null
+  },
+  {
+    "frame_id": 29,
+    "ts": "2026-11-23T06:50:00",
+    "description": "Clear view of the garage, no activity",
+    "telemetry": {
+      "ts": "2026-11-23T06:50:00",
+      "lat": 18.520465,
+      "lon": 73.856365,
+      "altitude_m": 43.3,
+      "heading_deg": 58.3,
+      "speed_mps": 5.4,
+      "battery_pct": 60.0,
+      "zone": "garage",
+      "flight_mode": "PATROL"
+    },
+    "image_path": null
+  },
+  {
+    "frame_id": 30,
+    "ts": "2026-11-23T07:10:00",
+    "description": "No people or vehicles visible at the front door",
+    "telemetry": {
+      "ts": "2026-11-23T07:10:00",
+      "lat": 18.520564,
+      "lon": 73.85656,
+      "altitude_m": 42.9,
+      "heading_deg": 36.4,
+      "speed_mps": 5.5,
+      "battery_pct": 44.0,
+      "zone": "front_door",
+      "flight_mode": "PATROL"
+    },
+    "image_path": null
+  },
+  {
+    "frame_id": 31,
+    "ts": "2026-11-23T07:30:00",
+    "description": "Blue Ford F150 pickup truck entering through the main gate, plate MH14CD5678",
+    "telemetry": {
+      "ts": "2026-11-23T07:30:00",
+      "lat": 18.520062,
+      "lon": 73.85603,
+      "altitude_m": 25.0,
+      "heading_deg": 220.5,
+      "speed_mps": 0.0,
+      "battery_pct": 100.0,
+      "zone": "main_gate",
+      "flight_mode": "HOVER"
+    },
+    "image_path": null
+  },
+  {
+    "frame_id": 32,
+    "ts": "2026-11-23T07:32:00",
+    "description": "Blue Ford F150 driving along the driveway toward the garage",
+    "telemetry": {
+      "ts": "2026-11-23T07:32:00",
+      "lat": 18.520222,
+      "lon": 73.85628,
+      "altitude_m": 25.0,
+      "heading_deg": 124.7,
+      "speed_mps": 0.0,
+      "battery_pct": 98.4,
+      "zone": "driveway",
+      "flight_mode": "HOVER"
+    },
+    "image_path": null
+  },
+  {
+    "frame_id": 33,
+    "ts": "2026-11-23T07:50:00",
+    "description": "Clear view of the loading dock, no activity",
+    "telemetry": {
+      "ts": "2026-11-23T07:50:00",
+      "lat": 18.520689,
+      "lon": 73.85707,
+      "altitude_m": 47.1,
+      "heading_deg": 356.5,
+      "speed_mps": 5.9,
+      "battery_pct": 84.0,
+      "zone": "loading_dock",
+      "flight_mode": "PATROL"
+    },
+    "image_path": null
+  },
+  {
+    "frame_id": 34,
+    "ts": "2026-11-23T08:05:00",
+    "description": "White Mercedes Sprinter delivery van parked at the loading dock, two people unloading boxes",
+    "telemetry": {
+      "ts": "2026-11-23T08:05:00",
+      "lat": 18.520699,
+      "lon": 73.857067,
+      "altitude_m": 25.0,
+      "heading_deg": 36.7,
+      "speed_mps": 0.0,
+      "battery_pct": 72.0,
+      "zone": "loading_dock",
+      "flight_mode": "HOVER"
+    },
+    "image_path": null
+  },
+  {
+    "frame_id": 35,
+    "ts": "2026-11-23T08:10:00",
+    "description": "Routine patrol over the warehouse, area quiet",
+    "telemetry": {
+      "ts": "2026-11-23T08:10:00",
+      "lat": 18.520887,
+      "lon": 73.856981,
+      "altitude_m": 47.0,
+      "heading_deg": 58.0,
+      "speed_mps": 4.1,
+      "battery_pct": 68.0,
+      "zone": "warehouse",
+      "flight_mode": "PATROL"
+    },
+    "image_path": null
+  },
+  {
+    "frame_id": 36,
+    "ts": "2026-11-23T08:20:00",
+    "description": "White Mercedes Sprinter van exiting the loading dock",
+    "telemetry": {
+      "ts": "2026-11-23T08:20:00",
+      "lat": 18.520736,
+      "lon": 73.857102,
+      "altitude_m": 25.0,
+      "heading_deg": 52.6,
+      "speed_mps": 0.0,
+      "battery_pct": 60.0,
+      "zone": "loading_dock",
+      "flight_mode": "HOVER"
+    },
+    "image_path": null
+  },
+  {
+    "frame_id": 37,
+    "ts": "2026-11-23T08:30:00",
+    "description": "Clear view of the backyard, no activity",
+    "telemetry": {
+      "ts": "2026-11-23T08:30:00",
+      "lat": 18.521003,
+      "lon": 73.856462,
+      "altitude_m": 45.2,
+      "heading_deg": 351.3,
+      "speed_mps": 7.5,
+      "battery_pct": 52.0,
+      "zone": "backyard",
+      "flight_mode": "PATROL"
+    },
+    "image_path": null
+  },
+  {
+    "frame_id": 38,
+    "ts": "2026-11-23T08:50:00",
+    "description": "Routine patrol over the perimeter fence, area quiet",
+    "telemetry": {
+      "ts": "2026-11-23T08:50:00",
+      "lat": 18.521216,
+      "lon": 73.856181,
+      "altitude_m": 44.2,
+      "heading_deg": 60.0,
+      "speed_mps": 7.1,
+      "battery_pct": 36.0,
+      "zone": "perimeter_fence",
+      "flight_mode": "PATROL"
+    },
+    "image_path": null
+  },
+  {
+    "frame_id": 39,
+    "ts": "2026-11-23T09:10:00",
+    "description": "Package left at the front door by a courier in a yellow vest",
+    "telemetry": {
+      "ts": "2026-11-23T09:10:00",
+      "lat": 18.520603,
+      "lon": 73.856622,
+      "altitude_m": 25.0,
+      "heading_deg": 118.3,
+      "speed_mps": 0.0,
+      "battery_pct": 92.0,
+      "zone": "front_door",
+      "flight_mode": "HOVER"
+    },
+    "image_path": null
+  },
+  {
+    "frame_id": 40,
+    "ts": "2026-11-23T09:12:00",
+    "description": "Courier in yellow vest walking back toward the main gate",
+    "telemetry": {
+      "ts": "2026-11-23T09:12:00",
+      "lat": 18.520578,
+      "lon": 73.856625,
+      "altitude_m": 25.0,
+      "heading_deg": 353.6,
+      "speed_mps": 0.0,
+      "battery_pct": 90.4,
+      "zone": "front_door",
+      "flight_mode": "HOVER"
+    },
+    "image_path": null
+  },
+  {
+    "frame_id": 41,
+    "ts": "2026-11-23T09:30:00",
+    "description": "Driveway empty, lighting normal",
+    "telemetry": {
+      "ts": "2026-11-23T09:30:00",
+      "lat": 18.520278,
+      "lon": 73.856324,
+      "altitude_m": 46.9,
+      "heading_deg": 265.6,
+      "speed_mps": 4.9,
+      "battery_pct": 76.0,
+      "zone": "driveway",
+      "flight_mode": "PATROL"
+    },
+    "image_path": null
+  },
+  {
+    "frame_id": 42,
+    "ts": "2026-11-23T09:50:00",
+    "description": "No people or vehicles visible at the garage",
+    "telemetry": {
+      "ts": "2026-11-23T09:50:00",
+      "lat": 18.520501,
+      "lon": 73.856388,
+      "altitude_m": 42.2,
+      "heading_deg": 10.0,
+      "speed_mps": 5.1,
+      "battery_pct": 60.0,
+      "zone": "garage",
+      "flight_mode": "PATROL"
+    },
+    "image_path": null
+  },
+  {
+    "frame_id": 43,
+    "ts": "2026-11-23T10:10:00",
+    "description": "Routine patrol over the front door, area quiet",
+    "telemetry": {
+      "ts": "2026-11-23T10:10:00",
+      "lat": 18.520581,
+      "lon": 73.856615,
+      "altitude_m": 47.7,
+      "heading_deg": 160.6,
+      "speed_mps": 7.7,
+      "battery_pct": 44.0,
+      "zone": "front_door",
+      "flight_mode": "PATROL"
+    },
+    "image_path": null
+  },
+  {
+    "frame_id": 44,
+    "ts": "2026-11-23T10:30:00",
+    "description": "Clear view of the parking lot, no activity",
+    "telemetry": {
+      "ts": "2026-11-23T10:30:00",
+      "lat": 18.520339,
+      "lon": 73.856936,
+      "altitude_m": 44.2,
+      "heading_deg": 79.1,
+      "speed_mps": 4.9,
+      "battery_pct": 100.0,
+      "zone": "parking_lot",
+      "flight_mode": "PATROL"
+    },
+    "image_path": null
+  },
+  {
+    "frame_id": 45,
+    "ts": "2026-11-23T10:40:00",
+    "description": "Package still at the front door, no one around",
+    "telemetry": {
+      "ts": "2026-11-23T10:40:00",
+      "lat": 18.520576,
+      "lon": 73.856576,
+      "altitude_m": 25.0,
+      "heading_deg": 224.0,
+      "speed_mps": 0.0,
+      "battery_pct": 92.0,
+      "zone": "front_door",
+      "flight_mode": "HOVER"
+    },
+    "image_path": null
+  },
+  {
+    "frame_id": 46,
+    "ts": "2026-11-23T10:50:00",
+    "description": "Loading dock empty, lighting normal",
+    "telemetry": {
+      "ts": "2026-11-23T10:50:00",
+      "lat": 18.520732,
+      "lon": 73.857127,
+      "altitude_m": 44.9,
+      "heading_deg": 234.4,
+      "speed_mps": 7.2,
+      "battery_pct": 84.0,
+      "zone": "loading_dock",
+      "flight_mode": "PATROL"
+    },
+    "image_path": null
+  },
+  {
+    "frame_id": 47,
+    "ts": "2026-11-23T11:10:00",
+    "description": "Routine patrol over the warehouse, area quiet",
+    "telemetry": {
+      "ts": "2026-11-23T11:10:00",
+      "lat": 18.520867,
+      "lon": 73.857013,
+      "altitude_m": 47.5,
+      "heading_deg": 280.8,
+      "speed_mps": 7.0,
+      "battery_pct": 68.0,
+      "zone": "warehouse",
+      "flight_mode": "PATROL"
+    },
+    "image_path": null
+  },
+  {
+    "frame_id": 48,
+    "ts": "2026-11-23T11:30:00",
+    "description": "Clear view of the backyard, no activity",
+    "telemetry": {
+      "ts": "2026-11-23T11:30:00",
+      "lat": 18.520998,
+      "lon": 73.856474,
+      "altitude_m": 46.7,
+      "heading_deg": 119.4,
+      "speed_mps": 7.2,
+      "battery_pct": 52.0,
+      "zone": "backyard",
+      "flight_mode": "PATROL"
+    },
+    "image_path": null
+  },
+  {
+    "frame_id": 49,
+    "ts": "2026-11-23T11:50:00",
+    "description": "Routine patrol over the perimeter fence, area quiet",
+    "telemetry": {
+      "ts": "2026-11-23T11:50:00",
+      "lat": 18.521238,
+      "lon": 73.856192,
+      "altitude_m": 44.4,
+      "heading_deg": 339.9,
+      "speed_mps": 6.9,
+      "battery_pct": 36.0,
+      "zone": "perimeter_fence",
+      "flight_mode": "PATROL"
+    },
+    "image_path": null
+  },
+  {
+    "frame_id": 50,
+    "ts": "2026-11-23T12:00:00",
+    "description": "Blue Ford F150 parked at the garage",
+    "telemetry": {
+      "ts": "2026-11-23T12:00:00",
+      "lat": 18.520474,
+      "lon": 73.85637,
+      "altitude_m": 25.0,
+      "heading_deg": 54.3,
+      "speed_mps": 0.0,
+      "battery_pct": 100.0,
+      "zone": "garage",
+      "flight_mode": "HOVER"
+    },
+    "image_path": null
+  },
+  {
+    "frame_id": 51,
+    "ts": "2026-11-23T12:10:00",
+    "description": "Main gate empty, lighting normal",
+    "telemetry": {
+      "ts": "2026-11-23T12:10:00",
+      "lat": 18.520132,
+      "lon": 73.856025,
+      "altitude_m": 42.9,
+      "heading_deg": 296.7,
+      "speed_mps": 7.9,
+      "battery_pct": 92.0,
+      "zone": "main_gate",
+      "flight_mode": "PATROL"
+    },
+    "image_path": null
+  },
+  {
+    "frame_id": 52,
+    "ts": "2026-11-23T12:30:00",
+    "description": "Clear view of the driveway, no activity",
+    "telemetry": {
+      "ts": "2026-11-23T12:30:00",
+      "lat": 18.520263,
+      "lon": 73.856288,
+      "altitude_m": 45.3,
+      "heading_deg": 47.0,
+      "speed_mps": 4.1,
+      "battery_pct": 76.0,
+      "zone": "driveway",
+      "flight_mode": "PATROL"
+    },
+    "image_path": null
+  },
+  {
+    "frame_id": 53,
+    "ts": "2026-11-23T12:50:00",
+    "description": "Clear view of the garage, no activity",
+    "telemetry": {
+      "ts": "2026-11-23T12:50:00",
+      "lat": 18.520538,
+      "lon": 73.856412,
+      "altitude_m": 45.2,
+      "heading_deg": 335.2,
+      "speed_mps": 5.7,
+      "battery_pct": 60.0,
+      "zone": "garage",
+      "flight_mode": "PATROL"
+    },
+    "image_path": null
+  },
+  {
+    "frame_id": 54,
+    "ts": "2026-11-23T13:10:00",
+    "description": "Clear view of the front door, no activity",
+    "telemetry": {
+      "ts": "2026-11-23T13:10:00",
+      "lat": 18.52063,
+      "lon": 73.856626,
+      "altitude_m": 43.3,
+      "heading_deg": 90.4,
+      "speed_mps": 5.2,
+      "battery_pct": 44.0,
+      "zone": "front_door",
+      "flight_mode": "PATROL"
+    },
+    "image_path": null
+  },
+  {
+    "frame_id": 55,
+    "ts": "2026-11-23T13:15:00",
+    "description": "Red Honda Civic parked in the parking lot",
+    "telemetry": {
+      "ts": "2026-11-23T13:15:00",
+      "lat": 18.520279,
+      "lon": 73.856907,
+      "altitude_m": 25.0,
+      "heading_deg": 93.1,
+      "speed_mps": 0.0,
+      "battery_pct": 40.0,
+      "zone": "parking_lot",
+      "flight_mode": "HOVER"
+    },
+    "image_path": null
+  },
+  {
+    "frame_id": 56,
+    "ts": "2026-11-23T13:30:00",
+    "description": "Routine patrol over the parking lot, area quiet",
+    "telemetry": {
+      "ts": "2026-11-23T13:30:00",
+      "lat": 18.520294,
+      "lon": 73.85687,
+      "altitude_m": 47.5,
+      "heading_deg": 127.0,
+      "speed_mps": 5.8,
+      "battery_pct": 100.0,
+      "zone": "parking_lot",
+      "flight_mode": "PATROL"
+    },
+    "image_path": null
+  },
+  {
+    "frame_id": 57,
+    "ts": "2026-11-23T13:50:00",
+    "description": "No people or vehicles visible at the loading dock",
+    "telemetry": {
+      "ts": "2026-11-23T13:50:00",
+      "lat": 18.520707,
+      "lon": 73.857132,
+      "altitude_m": 44.5,
+      "heading_deg": 329.5,
+      "speed_mps": 6.0,
+      "battery_pct": 84.0,
+      "zone": "loading_dock",
+      "flight_mode": "PATROL"
+    },
+    "image_path": null
+  },
+  {
+    "frame_id": 58,
+    "ts": "2026-11-23T14:10:00",
+    "description": "No people or vehicles visible at the warehouse",
+    "telemetry": {
+      "ts": "2026-11-23T14:10:00",
+      "lat": 18.520903,
+      "lon": 73.857002,
+      "altitude_m": 42.1,
+      "heading_deg": 158.0,
+      "speed_mps": 4.7,
+      "battery_pct": 68.0,
+      "zone": "warehouse",
+      "flight_mode": "PATROL"
+    },
+    "image_path": null
+  },
+  {
+    "frame_id": 59,
+    "ts": "2026-11-23T14:30:00",
+    "description": "Dog running across the backyard",
+    "telemetry": {
+      "ts": "2026-11-23T14:30:00",
+      "lat": 18.52096,
+      "lon": 73.856524,
+      "altitude_m": 25.0,
+      "heading_deg": 61.9,
+      "speed_mps": 0.0,
+      "battery_pct": 52.0,
+      "zone": "backyard",
+      "flight_mode": "HOVER"
+    },
+    "image_path": null
+  },
+  {
+    "frame_id": 60,
+    "ts": "2026-11-23T14:50:00",
+    "description": "Perimeter fence empty, lighting normal",
+    "telemetry": {
+      "ts": "2026-11-23T14:50:00",
+      "lat": 18.521198,
+      "lon": 73.856218,
+      "altitude_m": 45.3,
+      "heading_deg": 117.0,
+      "speed_mps": 6.1,
+      "battery_pct": 36.0,
+      "zone": "perimeter_fence",
+      "flight_mode": "PATROL"
+    },
+    "image_path": null
+  },
+  {
+    "frame_id": 61,
+    "ts": "2026-11-23T15:10:00",
+    "description": "Clear view of the driveway, no activity",
+    "telemetry": {
+      "ts": "2026-11-23T15:10:00",
+      "lat": 18.520254,
+      "lon": 73.856323,
+      "altitude_m": 131.0,
+      "heading_deg": 38.1,
+      "speed_mps": 0.0,
+      "battery_pct": 92.0,
+      "zone": "driveway",
+      "flight_mode": "HOVER"
+    },
+    "image_path": null
+  },
+  {
+    "frame_id": 62,
+    "ts": "2026-11-23T15:30:00",
+    "description": "No people or vehicles visible at the driveway",
+    "telemetry": {
+      "ts": "2026-11-23T15:30:00",
+      "lat": 18.520255,
+      "lon": 73.85628,
+      "altitude_m": 43.7,
+      "heading_deg": 277.2,
+      "speed_mps": 6.0,
+      "battery_pct": 76.0,
+      "zone": "driveway",
+      "flight_mode": "PATROL"
+    },
+    "image_path": null
+  },
+  {
+    "frame_id": 63,
+    "ts": "2026-11-23T15:50:00",
+    "description": "No people or vehicles visible at the garage",
+    "telemetry": {
+      "ts": "2026-11-23T15:50:00",
+      "lat": 18.520505,
+      "lon": 73.856421,
+      "altitude_m": 47.5,
+      "heading_deg": 159.1,
+      "speed_mps": 6.5,
+      "battery_pct": 60.0,
+      "zone": "garage",
+      "flight_mode": "PATROL"
+    },
+    "image_path": null
+  },
+  {
+    "frame_id": 64,
+    "ts": "2026-11-23T16:10:00",
+    "description": "Front door empty, lighting normal",
+    "telemetry": {
+      "ts": "2026-11-23T16:10:00",
+      "lat": 18.5206,
+      "lon": 73.856601,
+      "altitude_m": 46.2,
+      "heading_deg": 162.4,
+      "speed_mps": 6.1,
+      "battery_pct": 44.0,
+      "zone": "front_door",
+      "flight_mode": "PATROL"
+    },
+    "image_path": null
+  },
+  {
+    "frame_id": 65,
+    "ts": "2026-11-23T16:20:00",
+    "description": "Blue Ford F150 exiting the garage toward the main gate",
+    "telemetry": {
+      "ts": "2026-11-23T16:20:00",
+      "lat": 18.520498,
+      "lon": 73.856435,
+      "altitude_m": 25.0,
+      "heading_deg": 251.0,
+      "speed_mps": 0.0,
+      "battery_pct": 36.0,
+      "zone": "garage",
+      "flight_mode": "HOVER"
+    },
+    "image_path": null
+  },
+  {
+    "frame_id": 66,
+    "ts": "2026-11-23T16:22:00",
+    "description": "Blue Ford F150 exiting through the main gate",
+    "telemetry": {
+      "ts": "2026-11-23T16:22:00",
+      "lat": 18.52013,
+      "lon": 73.856035,
+      "altitude_m": 25.0,
+      "heading_deg": 93.2,
+      "speed_mps": 0.0,
+      "battery_pct": 34.4,
+      "zone": "main_gate",
+      "flight_mode": "HOVER"
+    },
+    "image_path": null
+  },
+  {
+    "frame_id": 67,
+    "ts": "2026-11-23T16:30:00",
+    "description": "Parking lot empty, lighting normal",
+    "telemetry": {
+      "ts": "2026-11-23T16:30:00",
+      "lat": 18.520305,
+      "lon": 73.856935,
+      "altitude_m": 47.0,
+      "heading_deg": 49.2,
+      "speed_mps": 4.5,
+      "battery_pct": 100.0,
+      "zone": "parking_lot",
+      "flight_mode": "PATROL"
+    },
+    "image_path": null
+  },
+  {
+    "frame_id": 68,
+    "ts": "2026-11-23T16:50:00",
+    "description": "Routine patrol over the loading dock, area quiet",
+    "telemetry": {
+      "ts": "2026-11-23T16:50:00",
+      "lat": 18.520695,
+      "lon": 73.857066,
+      "altitude_m": 43.4,
+      "heading_deg": 26.3,
+      "speed_mps": 6.7,
+      "battery_pct": 84.0,
+      "zone": "loading_dock",
+      "flight_mode": "PATROL"
+    },
+    "image_path": null
+  },
+  {
+    "frame_id": 69,
+    "ts": "2026-11-23T17:10:00",
+    "description": "Routine patrol over the warehouse, area quiet",
+    "telemetry": {
+      "ts": "2026-11-23T17:10:00",
+      "lat": 18.520923,
+      "lon": 73.857032,
+      "altitude_m": 42.9,
+      "heading_deg": 257.1,
+      "speed_mps": 6.6,
+      "battery_pct": 68.0,
+      "zone": "warehouse",
+      "flight_mode": "PATROL"
+    },
+    "image_path": null
+  },
+  {
+    "frame_id": 70,
+    "ts": "2026-11-23T17:30:00",
+    "description": "Routine patrol over the backyard, area quiet",
+    "telemetry": {
+      "ts": "2026-11-23T17:30:00",
+      "lat": 18.520971,
+      "lon": 73.856531,
+      "altitude_m": 47.8,
+      "heading_deg": 78.8,
+      "speed_mps": 7.8,
+      "battery_pct": 52.0,
+      "zone": "backyard",
+      "flight_mode": "PATROL"
+    },
+    "image_path": null
+  },
+  {
+    "frame_id": 71,
+    "ts": "2026-11-23T17:45:00",
+    "description": "Blue Ford F150 pickup truck entering through the main gate, plate MH14CD5678",
+    "telemetry": {
+      "ts": "2026-11-23T17:45:00",
+      "lat": 18.520092,
+      "lon": 73.855999,
+      "altitude_m": 25.0,
+      "heading_deg": 355.4,
+      "speed_mps": 0.0,
+      "battery_pct": 40.0,
+      "zone": "main_gate",
+      "flight_mode": "HOVER"
+    },
+    "image_path": null
+  },
+  {
+    "frame_id": 72,
+    "ts": "2026-11-23T17:50:00",
+    "description": "Clear view of the perimeter fence, no activity",
+    "telemetry": {
+      "ts": "2026-11-23T17:50:00",
+      "lat": 18.521227,
+      "lon": 73.856173,
+      "altitude_m": 44.6,
+      "heading_deg": 185.1,
+      "speed_mps": 5.4,
+      "battery_pct": 36.0,
+      "zone": "perimeter_fence",
+      "flight_mode": "PATROL"
+    },
+    "image_path": null
+  },
+  {
+    "frame_id": 73,
+    "ts": "2026-11-23T18:10:00",
+    "description": "Main gate empty, lighting normal",
+    "telemetry": {
+      "ts": "2026-11-23T18:10:00",
+      "lat": 18.520076,
+      "lon": 73.855985,
+      "altitude_m": 46.3,
+      "heading_deg": 7.0,
+      "speed_mps": 6.2,
+      "battery_pct": 92.0,
+      "zone": "main_gate",
+      "flight_mode": "PATROL"
+    },
+    "image_path": null
+  },
+  {
+    "frame_id": 74,
+    "ts": "2026-11-23T18:30:00",
+    "description": "No people or vehicles visible at the driveway",
+    "telemetry": {
+      "ts": "2026-11-23T18:30:00",
+      "lat": 18.520245,
+      "lon": 73.856261,
+      "altitude_m": 44.0,
+      "heading_deg": 224.0,
+      "speed_mps": 6.0,
+      "battery_pct": 76.0,
+      "zone": "driveway",
+      "flight_mode": "PATROL"
+    },
+    "image_path": null
+  },
+  {
+    "frame_id": 75,
+    "ts": "2026-11-23T18:50:00",
+    "description": "Garage empty, lighting normal",
+    "telemetry": {
+      "ts": "2026-11-23T18:50:00",
+      "lat": 18.520465,
+      "lon": 73.856439,
+      "altitude_m": 46.7,
+      "heading_deg": 348.8,
+      "speed_mps": 4.4,
+      "battery_pct": 60.0,
+      "zone": "garage",
+      "flight_mode": "PATROL"
+    },
+    "image_path": null
+  },
+  {
+    "frame_id": 76,
+    "ts": "2026-11-23T19:10:00",
+    "description": "No people or vehicles visible at the front door",
+    "telemetry": {
+      "ts": "2026-11-23T19:10:00",
+      "lat": 18.520581,
+      "lon": 73.856563,
+      "altitude_m": 46.7,
+      "heading_deg": 97.1,
+      "speed_mps": 4.5,
+      "battery_pct": 44.0,
+      "zone": "front_door",
+      "flight_mode": "PATROL"
+    },
+    "image_path": null
+  },
+  {
+    "frame_id": 77,
+    "ts": "2026-11-23T19:30:00",
+    "description": "Main gate left open, no one present",
+    "telemetry": {
+      "ts": "2026-11-23T19:30:00",
+      "lat": 18.520094,
+      "lon": 73.856033,
+      "altitude_m": 25.0,
+      "heading_deg": 294.0,
+      "speed_mps": 0.0,
+      "battery_pct": 100.0,
+      "zone": "main_gate",
+      "flight_mode": "HOVER"
+    },
+    "image_path": null
+  },
+  {
+    "frame_id": 78,
+    "ts": "2026-11-23T19:50:00",
+    "description": "Loading dock empty, lighting normal",
+    "telemetry": {
+      "ts": "2026-11-23T19:50:00",
+      "lat": 18.520681,
+      "lon": 73.857072,
+      "altitude_m": 47.5,
+      "heading_deg": 204.8,
+      "speed_mps": 6.8,
+      "battery_pct": 84.0,
+      "zone": "loading_dock",
+      "flight_mode": "PATROL"
+    },
+    "image_path": null
+  },
+  {
+    "frame_id": 79,
+    "ts": "2026-11-23T20:10:00",
+    "description": "Clear view of the warehouse, no activity",
+    "telemetry": {
+      "ts": "2026-11-23T20:10:00",
+      "lat": 18.520867,
+      "lon": 73.856965,
+      "altitude_m": 46.1,
+      "heading_deg": 152.7,
+      "speed_mps": 4.3,
+      "battery_pct": 68.0,
+      "zone": "warehouse",
+      "flight_mode": "PATROL"
+    },
+    "image_path": null
+  },
+  {
+    "frame_id": 80,
+    "ts": "2026-11-23T20:30:00",
+    "description": "Clear view of the backyard, no activity",
+    "telemetry": {
+      "ts": "2026-11-23T20:30:00",
+      "lat": 18.521035,
+      "lon": 73.856511,
+      "altitude_m": 46.8,
+      "heading_deg": 30.1,
+      "speed_mps": 7.4,
+      "battery_pct": 52.0,
+      "zone": "backyard",
+      "flight_mode": "PATROL"
+    },
+    "image_path": null
+  },
+  {
+    "frame_id": 81,
+    "ts": "2026-11-23T20:50:00",
+    "description": "No people or vehicles visible at the perimeter fence",
+    "telemetry": {
+      "ts": "2026-11-23T20:50:00",
+      "lat": 18.521165,
+      "lon": 73.856229,
+      "altitude_m": 44.7,
+      "heading_deg": 121.8,
+      "speed_mps": 6.2,
+      "battery_pct": 36.0,
+      "zone": "perimeter_fence",
+      "flight_mode": "PATROL"
+    },
+    "image_path": null
+  },
+  {
+    "frame_id": 82,
+    "ts": "2026-11-23T21:05:00",
+    "description": "Red Honda Civic exiting the parking lot",
+    "telemetry": {
+      "ts": "2026-11-23T21:05:00",
+      "lat": 18.520334,
+      "lon": 73.856881,
+      "altitude_m": 25.0,
+      "heading_deg": 46.4,
+      "speed_mps": 0.0,
+      "battery_pct": 96.0,
+      "zone": "parking_lot",
+      "flight_mode": "HOVER"
+    },
+    "image_path": null
+  },
+  {
+    "frame_id": 83,
+    "ts": "2026-11-23T21:10:00",
+    "description": "Routine patrol over the main gate, area quiet",
+    "telemetry": {
+      "ts": "2026-11-23T21:10:00",
+      "lat": 18.520102,
+      "lon": 73.855979,
+      "altitude_m": 42.7,
+      "heading_deg": 58.0,
+      "speed_mps": 4.2,
+      "battery_pct": 92.0,
+      "zone": "main_gate",
+      "flight_mode": "PATROL"
+    },
+    "image_path": null
+  },
+  {
+    "frame_id": 84,
+    "ts": "2026-11-23T21:30:00",
+    "description": "Driveway empty, lighting normal",
+    "telemetry": {
+      "ts": "2026-11-23T21:30:00",
+      "lat": 18.520226,
+      "lon": 73.856285,
+      "altitude_m": 43.8,
+      "heading_deg": 272.7,
+      "speed_mps": 5.2,
+      "battery_pct": 76.0,
+      "zone": "driveway",
+      "flight_mode": "PATROL"
+    },
+    "image_path": null
+  },
+  {
+    "frame_id": 85,
+    "ts": "2026-11-23T21:50:00",
+    "description": "Routine patrol over the garage, area quiet",
+    "telemetry": {
+      "ts": "2026-11-23T21:50:00",
+      "lat": 18.5205,
+      "lon": 73.856374,
+      "altitude_m": 44.1,
+      "heading_deg": 6.5,
+      "speed_mps": 5.0,
+      "battery_pct": 60.0,
+      "zone": "garage",
+      "flight_mode": "PATROL"
+    },
+    "image_path": null
+  },
+  {
+    "frame_id": 86,
+    "ts": "2026-11-23T22:10:00",
+    "description": "No people or vehicles visible at the front door",
+    "telemetry": {
+      "ts": "2026-11-23T22:10:00",
+      "lat": 18.520561,
+      "lon": 73.856619,
+      "altitude_m": 45.3,
+      "heading_deg": 68.0,
+      "speed_mps": 5.9,
+      "battery_pct": 44.0,
+      "zone": "front_door",
+      "flight_mode": "PATROL"
+    },
+    "image_path": null
+  },
+  {
+    "frame_id": 87,
+    "ts": "2026-11-23T22:30:00",
+    "description": "Grey sedan with headlights off circling slowly on the perimeter road",
+    "telemetry": {
+      "ts": "2026-11-23T22:30:00",
+      "lat": 18.521235,
+      "lon": 73.856169,
+      "altitude_m": 25.0,
+      "heading_deg": 294.0,
+      "speed_mps": 0.0,
+      "battery_pct": 100.0,
+      "zone": "perimeter_fence",
+      "flight_mode": "HOVER"
+    },
+    "image_path": null
+  },
+  {
+    "frame_id": 88,
+    "ts": "2026-11-23T22:50:00",
+    "description": "No people or vehicles visible at the loading dock",
+    "telemetry": {
+      "ts": "2026-11-23T22:50:00",
+      "lat": 18.520695,
+      "lon": 73.8571,
+      "altitude_m": 47.0,
+      "heading_deg": 141.1,
+      "speed_mps": 6.0,
+      "battery_pct": 84.0,
+      "zone": "loading_dock",
+      "flight_mode": "PATROL"
+    },
+    "image_path": null
+  },
+  {
+    "frame_id": 89,
+    "ts": "2026-11-23T23:10:00",
+    "description": "Two people near the warehouse door with a flashlight, testing the door handle",
+    "telemetry": {
+      "ts": "2026-11-23T23:10:00",
+      "lat": 18.520915,
+      "lon": 73.857039,
+      "altitude_m": 25.0,
+      "heading_deg": 123.0,
+      "speed_mps": 0.0,
+      "battery_pct": 68.0,
+      "zone": "warehouse",
+      "flight_mode": "HOVER"
+    },
+    "image_path": null
+  },
+  {
+    "frame_id": 90,
+    "ts": "2026-11-23T23:30:00",
+    "description": "Clear view of the backyard, no activity",
+    "telemetry": {
+      "ts": "2026-11-23T23:30:00",
+      "lat": 18.521027,
+      "lon": 73.856517,
+      "altitude_m": 45.8,
+      "heading_deg": 145.3,
+      "speed_mps": 5.4,
+      "battery_pct": 52.0,
+      "zone": "backyard",
+      "flight_mode": "PATROL"
+    },
+    "image_path": null
+  },
+  {
+    "frame_id": 91,
+    "ts": "2026-11-23T23:40:00",
+    "description": "Clear view of the driveway, no activity",
+    "telemetry": {
+      "ts": "2026-11-23T23:40:00",
+      "lat": 18.520214,
+      "lon": 73.85627,
+      "altitude_m": 25.0,
+      "heading_deg": 25.4,
+      "speed_mps": 0.0,
+      "battery_pct": 14.0,
+      "zone": "driveway",
+      "flight_mode": "RTL"
+    },
+    "image_path": null
+  },
+  {
+    "frame_id": 92,
+    "ts": "2026-11-23T23:50:00",
+    "description": "Clear view of the perimeter fence, no activity",
+    "telemetry": {
+      "ts": "2026-11-23T23:50:00",
+      "lat": 18.521219,
+      "lon": 73.85618,
+      "altitude_m": 43.0,
+      "heading_deg": 30.3,
+      "speed_mps": 7.4,
+      "battery_pct": 36.0,
+      "zone": "perimeter_fence",
+      "flight_mode": "PATROL"
+    },
+    "image_path": null
+  }
+]
